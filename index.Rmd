@@ -1,0 +1,31 @@
+---
+title: '`r if (knitr::is_html_output() == TRUE) "MSc Data Science Thesis"`'
+author: "My Name"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+classoption: openany
+documentclass: book
+geometry: margin=1in
+link-citations: yes
+lof: yes
+lot: yes
+site: bookdown::bookdown_site
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, tidy = FALSE)
+def.chunk.hook <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def.chunk.hook(x, options)
+  ifelse(options$size != "normalsize", 
+         paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize \n"), x)
+})
+require(broom)
+library(tidyverse)
+```
+
+# Acknowledgements{-}
+
+I would like to thank ...
+
+\mainmatter
