@@ -32,20 +32,23 @@ For the sake of clarity, the $\varepsilon_{1,t}$ is defined to describe the shoc
 ## External instrument
 
 For an external instrument $z_t$ to be useful in idenfiying sturctural shocks it has to satisfy the following two conditions:
+
 $$
-\begin{align}
+\begin{aligned}
 \mathbb{E}(z_t \varepsilon_{1,t}) &= \alpha \neq 0 \\
 \mathbb{E}(z_t \varepsilon_{i\neq 1,t}) &= 0 
-\end{align}
+\end{aligned}
 $$
+ 
 
 The equation x is the relevance condition and the equation y is the exogeneity condition. If these conditions in tandem with the invertibility requirement are met the sign and the and scale of the $s_1$ can be identified by:
 
-$$
+
 \begin{equation}
 s_1 \propto \frac{\mathbb{E}(z_t u_t)}{\mathbb{E}(z_t u_{1,t})}
+(\#eq:prop)
 \end{equation}
-$$
+
 
 The size of $\alpha$ is the strength of the external instrument and it can be tested with the XXX elaborated in the nönnönnöös (2018) article. After the structural impact vector has been identified the estimation of the confidence bands in IRF can be done with a moving block bootstrap method, also used in the Känzig (2022).
 

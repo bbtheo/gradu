@@ -1,3 +1,19 @@
+bookdown::pdf_document2:
+  toc: true
+  includes:
+    in_header: latex/preamble.tex  
+    before_body: latex/title.tex
+    keep_tex: true # uncomment to keep merged tex file
+  number_sections : true
+  toc_depth: 2
+  citation_package: natbib
+bookdown::pdf_book:
+  toc: true
+  includes:
+    in_header: latex/preamble.tex
+    before_body: latex/title.tex
+    after_body: latex/after_body.tex
+    keep_tex: true # uncomment to keep merged tex file
 bookdown::gitbook:
   config:
     sharing: no
@@ -6,11 +22,4 @@ bookdown::gitbook:
       text: "Edit"
     view:
       link: https://github.com/remlapmot/bookdown-thesis/blob/master/%s
-bookdown::pdf_book:
-  toc: true
-  includes:
-    in_header: latex/preamble.tex
-    before_body: latex/before_body.tex
-    after_body: latex/after_body.tex
-    # keep_tex: true # uncomment to keep merged tex file
 # bookdown::word_document2: default # uncomment for word document

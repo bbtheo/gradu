@@ -1,21 +1,18 @@
 ---
-title: ''
-author: "My Name"
-date: "07 September 2021"
-classoption: openany
-documentclass: book
-geometry: margin=1in
-link-citations: yes
-lof: yes
-lot: yes
-site: bookdown::bookdown_site
+documentclass: report
 bibliography: bibliography.bib
+biblio-style: "apalike"
+fontsize: 12pt
+papersize: a4
+linestretch: 1.5
+link-citations: yes
 ---
 
 
 
-# Acknowledgements{-}
 
-I would like to thank ...
+\setcounter{page}{1}
 
-\mainmatter
+# Introduction {#intro}
+
+The government reforms are a 

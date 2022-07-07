@@ -1,31 +1,26 @@
 ---
-title: '`r if (knitr::is_html_output() == TRUE) "MSc Data Science Thesis"`'
-author: "My Name"
-date: "`r format(Sys.Date(), '%d %B %Y')`"
-classoption: openany
-documentclass: book
-geometry: margin=1in
-link-citations: yes
-lof: yes
-lot: yes
-site: bookdown::bookdown_site
+documentclass: report
 bibliography: bibliography.bib
+biblio-style: "apalike"
+fontsize: 12pt
+papersize: a4
+linestretch: 1.5
+link-citations: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, tidy = FALSE)
-def.chunk.hook <- knitr::knit_hooks$get("chunk")
-knitr::knit_hooks$set(chunk = function(x, options) {
-  x <- def.chunk.hook(x, options)
-  ifelse(options$size != "normalsize", 
-         paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize \n"), x)
-})
-require(broom)
+```{r setup, include=FALSE, cache=TRUE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(ggplot2)
 library(tidyverse)
+library(readxl)
+
+#source('gradu_read_data.R')
 ```
 
-# Acknowledgements{-}
 
-I would like to thank ...
+\setcounter{page}{1}
 
-\mainmatter
+# Introduction {#intro}
+
+The government reforms are a 

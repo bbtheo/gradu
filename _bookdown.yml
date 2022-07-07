@@ -3,3 +3,10 @@ output_dir: "docs"
 delete_merged_file: true
 always_allow_html: yes
 new_session: true # required for kableExtra to play nicely with bookdown
+documentclass: report
+bibliography: bibliography.bib
+biblio-style: "apalike"
+fontsize: 12pt
+papersize: a4
+linestretch: 1.5
+link-citations: yes
