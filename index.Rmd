@@ -15,7 +15,7 @@ library(ggplot2)
 library(tidyverse)
 library(readxl)
 
-#source('gradu_read_data.R')
+source('gradu_read_data.R')
 ```
 
 # Introduction {#intro}

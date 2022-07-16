@@ -178,3 +178,17 @@ get_log_data <-function(){    # changes the raw values of useful data to log-lev
 }
 
 
+get_eua_data <- function(){
+  read_xlsx("data/EAU_FUTURES.xlsx") %>% 
+    rename("EEX_EU_SETT_PRICE" = "EEX-EU CO2 Emissions E/EUA - SETT. PRICE",
+           "ICE_EUA_FRONT" = "ICE EUA Yearly Energy Future c1 - SETT. PRICE",
+           "ICE_EUA_2" = "ICE EUA Yearly Energy Future c2 - SETT. PRICE",
+           "ICE_EUA_3" = "ICE EUA Yearly Energy Future c3 - SETT. PRICE",
+           "ICE_EUA_4" = "ICE EUA Yearly Energy Future c4 - SETT. PRICE",
+           "ICE_EUA_5" = "ICE EUA Yearly Energy Future c5 - SETT. PRICE",
+           "ICE_EUA_6" = "ICE EUA Yearly Energy Future c6 - SETT. PRICE",
+           "ICE_EUA_7" = "ICE EUA Yearly Energy Future c7 - SETT. PRICE",
+           'date' = 'Date') %>% 
+    mutate(date = lubridate::as_date(date))
+}
+get_eua_data()
