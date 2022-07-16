@@ -1,3 +1,3 @@
 # Here is my thesis.
 
-Using the templeta from 
+Using the template from [thesisdown](https://github.com/ismayc/thesisdown).
