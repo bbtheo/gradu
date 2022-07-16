@@ -1,7 +1,7 @@
 bookdown::pdf_document2:
   toc: true
   includes:
-    #in_header: latex/preamble.tex  
+    in_header: latex/preamble.tex  
     before_body: latex/title.tex
     keep_tex: true # uncomment to keep merged tex file
   number_sections : true

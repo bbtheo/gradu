@@ -2,10 +2,10 @@ book_filename: "bookdown-thesis.Rmd"
 output_dir: "docs"
 delete_merged_file: true
 always_allow_html: yes
-new_session: true # required for kableExtra to play nicely with bookdown
+new_session: false # required for kableExtra to play nicely with bookdown
 documentclass: report
 bibliography: bibliography.bib
-biblio-style: "apalike"
+biblio-style: "apa"
 fontsize: 12pt
 papersize: a4
 linestretch: 1.5

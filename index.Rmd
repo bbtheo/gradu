@@ -9,7 +9,10 @@ link-citations: yes
 ---
 
 ```{r setup, include=FALSE, cache=TRUE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, 
+                      out.width="90%", 
+                      fig.align = 'center')
+
 
 library(ggplot2)
 library(tidyverse)

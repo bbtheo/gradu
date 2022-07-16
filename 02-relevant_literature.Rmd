@@ -30,7 +30,9 @@ Prior to the research I am replicating in this thesis Känzig (2021) studied the
 
 De Winne and Peersman (2021), focused on their research in the effects of extreme weather events on the food prices and real GDP in both developed and developing countries. In their research they two different instruments to estimate the effects of extreme weather events to the global agricultural commodity market, and secondary impacts to economic variables. Their research argues that the middle-income countries would be hardest hit with price shocks in the agricultural commodity market, as lower-income countries which are more reliant on agriculture would incur windfall profits with higher prices. They also suggest that previous research has undervalued the consequences of extreme weather event related price shocks in the agricultural commodities markets can have in the rich countries. Even though the evidence is statistically the authors call for additional research to theorise the propagation channels to wider economy. (De Winne and Peersman, 2021.) The findings should be treated with caution as the authors analysis does not take account of the decrease in agricultural output capability that might coincide with the changing climate. Their research though is vital in underlining the effects to the high-income countries through the price shocks (De Winne and Peersman, 2021). With similar focus Faccia, Parker and Stracca (2021) studied in a European central bank working paper the effects of anomalous temperatures in winter and summer to medium term inflation. According to the authors, medium term inflation is non-trivially affected by the extreme weather events, in addition they also argue that climate change will have an affect to the central banks primary mandate of price stability. (Faccia et al., 2021.)
 
-The original paper of using exogenous announcement shocks as time series instruments is the paper written by Romer and Romer in 
+The work that pioneered the method of using exogenous announcement shocks as time series instruments was the seminal paper 
+
+*Lisää romer ja romer biblioon*
 
 Romerin ja Romerin paperi verojen muutoksien vaikutuksesta
 
