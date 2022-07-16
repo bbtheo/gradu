@@ -12,8 +12,8 @@ bookdown::pdf_book:
   includes:
     in_header: latex/preamble.tex
     before_body: latex/title.tex
-    after_body: latex/after_body.tex
     keep_tex: true # uncomment to keep merged tex file
+  citation_package: natbib    
 bookdown::gitbook:
   config:
     sharing: no

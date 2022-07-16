@@ -10,9 +10,6 @@ link-citations: yes
 
 
 
-
-\setcounter{page}{1}
-
 # Introduction {#intro}
 
 The government reforms are a 

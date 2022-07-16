@@ -18,9 +18,6 @@ library(readxl)
 #source('gradu_read_data.R')
 ```
 
-
-\setcounter{page}{1}
-
 # Introduction {#intro}
 
 The government reforms are a 
