@@ -5,7 +5,7 @@ always_allow_html: yes
 new_session: false # required for kableExtra to play nicely with bookdown
 documentclass: report
 bibliography: bibliography.bib
-biblio-style: "apa"
+biblio-style: "apalike"
 fontsize: 12pt
 papersize: a4
 linestretch: 1.5

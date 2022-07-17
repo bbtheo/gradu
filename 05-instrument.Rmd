@@ -1,4 +1,4 @@
-# Instrument
+# Instrument {#inst}
 
 Juttuja instrumentin käyttämisestä asian mittaamiseks jota ei voi mitata yleistä teoriaa instrumentti muuttujista
 
