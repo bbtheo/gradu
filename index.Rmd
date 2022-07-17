@@ -10,17 +10,17 @@ link-citations: yes
 
 ```{r setup, include=FALSE, cache=TRUE}
 knitr::opts_chunk$set(echo = FALSE, 
-                      out.width="90%", 
-                      fig.align = 'center')
-
-
+                      fig.width = 7,
+                      fig.height = 5,
+                      fig.align = 'left')
 library(ggplot2)
 library(tidyverse)
 library(readxl)
+library(dplyr)
 
 source('gradu_read_data.R')
 ```
 
 # Introduction {#intro}
 
-The government reforms are a 
+The Finnish government is  

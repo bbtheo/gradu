@@ -1,6 +1,6 @@
 # Results
 
-## First stage
+## First stage {#firststage}
 
 Inference with instrumental variables lies on the assumptions of relevancy with the shock of interest and exogeneity with other shocks. An other hidden assumption is that a weak correlation between the instrument and the structural shock of interest compromises the large sample validity of the inference based on the instrument. Due to this Montiel Olea, Stock and Watson (2020) propose that the first-stage heteroskedasticity-robust F-statistic between the instrument and the VAR-residual should be reported as a measure of the strength of the instrument. They also propose a rule of thumb of $F > 10$ for to be sure that the instrument is not weak.(Montiel Olea, Stock and Watson, 2020.)
 

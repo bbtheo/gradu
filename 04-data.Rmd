@@ -1,6 +1,6 @@
 # Data
 
-I will follow the Känzig's formulation as having the following endogenous variables. The model consists of two different sections, the carbon section, which consists of consumer price index of energy and the disaggregated greenhouse gas emission time series. The macroeconomic section which is consists of head line consumer price index, industrial production index, 3 month Euribor rate, unemployment rate, OMX Helsinki stock index, and real exchange rate of Finland.
+I will follow the \citeauthor{kaenzig2022}'s formulation as having the following endogenous variables. The model consists of two different sections, the carbon section, which consists of consumer price index of energy and the disaggregated greenhouse gas emission time series. The macroeconomic section which is consists of head line consumer price index, industrial production index, 3 month Euribor rate, unemployment rate, OMX Helsinki stock index, and real exchange rate of Finland.
 
 
 $$

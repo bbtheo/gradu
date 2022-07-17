@@ -44,11 +44,11 @@ The identification of regulatory events is a vital part of the building of this 
 
 ![Figure 3: Carbon policy surprise series](Slide_pictures/surprise.png){}
 
-The dates are collected prior to ???
+The dates
 
-## Diagnostics of the Surprise as an external instrument
+## Diagnostics of the Surprise as an external instrument {#diagextinst}
 
-The major problem that the instrument could have is that it would have a is the serial correlation. THankfully there is no evidence of persistent autocorrelation. There is a statistically significant autocorrelation after 11 lags. It can be seen from the following figure.
+The major problem that the instrument could have is that it would have a is the serial correlation. There is no evidence of persistent autocorrelation. There is a statistically significant autocorrelation after 11 lags. It can be seen from the following figure.
 
 ![Autocorrelation of the instrument](Slide_pictures/acf.png){}
 
@@ -56,6 +56,6 @@ This autocorrelation of 11 lags would mean that the last year's regulatory annou
 
 ![Monthly annoucements and their effects to the future prices](Slide_pictures/shock_amounts.png){}
 
-This is an additional reason why there is noticeable seasonal fluctuation in the appendix x. 
+This is an additional reason why there is noticeable seasonal fluctuation in the appendix \@ref(seasonapp). 
 
 \newpage
