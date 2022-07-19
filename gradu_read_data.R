@@ -78,24 +78,26 @@ get_coal_data<-function(start_date = "01.01.2000", end_date = "31.12.2021"){
     filter(Date >= lubridate::dmy(start_date),
            Date <= lubridate::dmy(end_date))
 }
-get_energy_data<-function(start_date = "01.01.2000", end_date = "31.12.2021", spread = F){
+
+get_energy_data<-function(start_date = "01.01.2000", 
+                          end_date = "31.12.2021", 
+                          spread = F){
   library(readxl)
   library(tidyr)
+  library(dplyr)
   
-  #Suppressing warnings for some shenannigans
-  oldw <- getOption("warn")
-  options(warn = -1)
-  
-  df<-readxl::read_xlsx("data/energia.xlsx", skip = 2) %>%
-    rename(Date = "...1", Type = "...2", GWh = "M??r? (GWh)") %>%
-    fill(Date) %>%
-    mutate(Date = lubridate::ym(Date), Type = as.factor(Type), GWh = replace_na(as.numeric(GWh),0)) %>%
-    filter(Date >= lubridate::dmy(start_date),
-           Date <= lubridate::dmy(end_date))
- 
-   #returning warnings
-  options(warn = oldw)
-  
+  df <- readxl::read_xlsx("data/energia.xlsx", skip = 2) %>% 
+    janitor::clean_names() %>% 
+    rename(date = x1, 
+           Type = x2, 
+           GWh = maara_g_wh) %>% 
+    fill(date) %>%
+    mutate(date = lubridate::ym(date), 
+           Type = as.factor(Type), 
+           GWh = replace_na(as.numeric(GWh),0)) %>%
+    dplyr::filter(date >= lubridate::dmy(start_date),
+                  date <= lubridate::dmy(end_date))
+
   if(!spread){
     return(df)
   } else {
@@ -103,15 +105,17 @@ get_energy_data<-function(start_date = "01.01.2000", end_date = "31.12.2021", sp
   }
 }
   
-get_subset_energy<-function(start_date = "01.01.2000", end_date = "31.12.2021"){
-  
-  library(dplyr)
-  get_energy_data(start_date = start_date, end_date = end_date, spread = T) %>% 
-      mutate(renewal_energy = `1.1 Vesivoima`+`1.2 Tuulivoima`+`1.3 Aurinkovoima`,
-            non_renewal_energy = `1.5 Yhteistuotanto yhteens? (CHP)`+`1.6 Tavallinen lauhdevoima`,
-            nuclear_energy = `1.4 Ydinvoima`) %>%
-      dplyr::select(Date, renewal_energy, non_renewal_energy, nuclear_energy)
-  
+get_subset_energy<-function(start_date = "01.01.2000", 
+                            end_date = "31.12.2021"){
+   
+  get_energy_data(start_date = start_date, 
+                  end_date = end_date, 
+                  spread = T) %>%
+    janitor::clean_names() %>% 
+    dplyr::mutate(renewal_energy = x1_1_vesivoima + x1_2_tuulivoima + x1_3_aurinkovoima,
+          non_renewal_energy = x1_5_yhteistuotanto_yhteensa_chp + x1_6_tavallinen_lauhdevoima,
+          nuclear_energy = x1_4_ydinvoima ) %>%
+    dplyr::select(date, renewal_energy, non_renewal_energy, nuclear_energy)
 }
 
 
@@ -126,7 +130,8 @@ get_production_data<-function(start_date = "01.01.2000", end_date = "31.12.2021"
 }
 
 get_ghg_data<-function(){
-  readxl::read_xlsx("data/GHG.xlsx")%>%
+  library(dplyr)
+  readxl::read_xlsx("data/GHG.xlsx") %>%
     .[11:31,]
 }
 
@@ -179,7 +184,7 @@ get_log_data <-function(){    # changes the raw values of useful data to log-lev
 
 
 get_eua_data <- function(){
-  read_xlsx("data/EAU_FUTURES.xlsx") %>% 
+  readxl::read_xlsx("data/EAU_FUTURES.xlsx") %>% 
     rename("EEX_EU_SETT_PRICE" = "EEX-EU CO2 Emissions E/EUA - SETT. PRICE",
            "ICE_EUA_FRONT" = "ICE EUA Yearly Energy Future c1 - SETT. PRICE",
            "ICE_EUA_2" = "ICE EUA Yearly Energy Future c2 - SETT. PRICE",
@@ -189,6 +194,6 @@ get_eua_data <- function(){
            "ICE_EUA_6" = "ICE EUA Yearly Energy Future c6 - SETT. PRICE",
            "ICE_EUA_7" = "ICE EUA Yearly Energy Future c7 - SETT. PRICE",
            'date' = 'Date') %>% 
-    mutate(date = lubridate::as_date(date))
+    dplyr::mutate(date = lubridate::as_date(date))
 }
-get_eua_data()
+

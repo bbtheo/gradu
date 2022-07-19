@@ -1,3 +1,13 @@
+```{r setup-clipol}
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+library(dplyr)
+
+source('gradu_read_data.R')
+```
+
+
 # Climate policy in Finland {#clipolfi}
 
 In this chapter, I will provide a short introduction to the climate policy in Finland before the implementation of the European Union emission trading system and a brief introduction of the different phases of the European Union emission trading system. The effects of these regulatory updates are discussed in the following chapter, but a short synopsis of the regulatory evolution is necessary for the reader to fully appreciate the economic consequences of the policy shocks produced by said institutions. 
@@ -18,9 +28,12 @@ Phase II continued with a similar framework of NAPs and their Commission approva
 
 ```{r price-evolution, fig.cap="The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0"}
 
-get_eua_data() %>% 
-  select(1:5) %>% 
-  pivot_longer(-date) %>%  
+library(tidyverse)
+library(ggplot2)
+
+get_eua_data() |> 
+  select(1:5) |> 
+  pivot_longer(-date) |>  
   ggplot(aes(x = date, y = value, colour = name)) +
   geom_line() +
   geom_vline(xintercept = c(lubridate::ymd('20071231'),
