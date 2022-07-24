@@ -1,8 +1,8 @@
 book_filename: "bookdown-thesis.Rmd"
 output_dir: "docs"
 delete_merged_file: true
-always_allow_html: yes
-new_session: false # required for kableExtra to play nicely with bookdown
+always_allow_html: true
+new_session: true # required for kableExtra to play nicely with bookdown
 documentclass: report
 bibliography: bibliography.bib
 biblio-style: "apalike"

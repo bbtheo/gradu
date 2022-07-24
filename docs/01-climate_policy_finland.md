@@ -1,6 +1,81 @@
+
+```r
+library(ggplot2)
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 4.1.3
+```
+
+```r
+library(tidyverse)
+```
+
+```
+## Warning: package 'tidyverse' was built under R version 4.1.3
+```
+
+```
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+```
+
+```
+## v tibble  3.1.7     v dplyr   1.0.9
+## v tidyr   1.2.0     v stringr 1.4.0
+## v readr   2.1.2     v forcats 0.5.1
+## v purrr   0.3.4
+```
+
+```
+## Warning: package 'tibble' was built under R version 4.1.3
+```
+
+```
+## Warning: package 'tidyr' was built under R version 4.1.3
+```
+
+```
+## Warning: package 'readr' was built under R version 4.1.3
+```
+
+```
+## Warning: package 'purrr' was built under R version 4.1.3
+```
+
+```
+## Warning: package 'dplyr' was built under R version 4.1.3
+```
+
+```
+## Warning: package 'stringr' was built under R version 4.1.3
+```
+
+```
+## Warning: package 'forcats' was built under R version 4.1.3
+```
+
+```
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+```
+
+```r
+library(readxl)
+```
+
+```
+## Warning: package 'readxl' was built under R version 4.1.3
+```
+
+```r
+library(dplyr)
+
+source('gradu_read_data.R')
+```
+
+
 # Climate policy in Finland {#clipolfi}
-
-
 
 In this chapter, I will provide a short introduction to the climate policy in Finland before the implementation of the European Union emission trading system and a brief introduction of the different phases of the European Union emission trading system. The effects of these regulatory updates are discussed in the following chapter, but a short synopsis of the regulatory evolution is necessary for the reader to fully appreciate the economic consequences of the policy shocks produced by said institutions. 
 
@@ -19,10 +94,47 @@ Phase I of EU ETS was widely considered the experimentation period where the ins
 Phase II continued with a similar framework of NAPs and their Commission approvals \citep{ellerman2020}. The governments were allowed to auction up to 10 per cent of the allowances, compared to 5 per cent in Phase I \citep{ellerman2020}. Industrial production slowed abruptly after the financial crisis, which made the cap non-binding, thus reducing the price of the allowances to near zero \citep{verde2019free}. The effects of the different phases to the prices of the emission trading allowances can be seen clearly in Figure \@ref(fig:price-evolution).
 
 
-<div class="figure">
-<img src="01-climate_policy_finland_files/figure-html/price-evolution-1.png" alt="The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system." width="10cm" height="5cm" />
-<p class="caption">(\#fig:price-evolution)The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system.</p>
-</div>
+```r
+library(tidyverse)
+library(ggplot2)
+
+get_eua_data() |> 
+  select(1:5) |> 
+  pivot_longer(-date) |>  
+  ggplot(aes(x = date, y = value, colour = name)) +
+  geom_line() +
+  geom_vline(xintercept = c(lubridate::ymd('20071231'),
+                            lubridate::ymd('20121231'),
+                            lubridate::ymd('20201231')),
+             linetype = "dashed", alpha = 0.5, size = 1)+
+  labs(x = '', y = '€') +
+  annotate(geom = "text",
+           y = 80, 
+           x = lubridate::ymd('20060630'), 
+           label = 'Phase I')+
+  annotate(geom = "text",
+           y = 80, 
+           x = lubridate::ymd('20100630'), 
+           label = 'Phase II')+
+  annotate(geom = "text",
+           y = 80, 
+           x = lubridate::ymd('20170630'), 
+           label = 'Phase III')+
+  annotate(geom = "text",
+           y = 15, 
+           x = lubridate::ymd('20211230'), 
+           label = 'Phase IV')+
+  scale_color_brewer(palette = 'Set1', 
+                     name = '', 
+                     labels = c('Settlement price',
+                                'Front contract',
+                                'Second contract',
+                                'Third contract'))+
+  theme_bw()+
+  theme(legend.position = 'bottom')
+```
+
+![(\#fig:price-evolution)The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0](01-climate_policy_finland_files/figure-latex/price-evolution-1.pdf) 
 
 The oversupply of ETS allowances in late Phase II led to the reforms in Phase III. The most substantial updates to the ETS were the abolition of the NAP and the resulting centralisation of the system by adopting a single EU-wide cap. This cap was planned to reduce yearly by a linear amount that was decided to be 1.74 per cent of the year 2010 total allowances. \citep{ellerman2020}. This linear decrease would lead to a total of 21 per cent reduction by 2020 in emissions in the markets governed by the ETS when compared to the levels in 2005 \citep{verde2019free}. Another major reform enacted in Phase III was the phasing out of the free allocation to the energy sector in 2013 and plans of enacting this also to the remaining industrial sectors by 2027 \citep{ellerman2020}. The effects of these strict system overhauls can also be seen in figure 1, where the news of future updates can be seen moving the price of futures before it is realised at the spot price of the allowances. This is the essence behind the carbon policy surprise series and its usefulness in identifying the structural shocks in the SVAR model in chapter 5.
 

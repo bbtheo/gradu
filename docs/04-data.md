@@ -1,6 +1,8 @@
+
+
 # Data
 
-I will follow the Känzig's formulation as having the following endogenous variables. The model consists of two different sections, the carbon section, which consists of consumer price index of energy and the disaggregated greenhouse gas emission time series. The macroeconomic section which is consists of head line consumer price index, industrial production index, 3 month Euribor rate, unemployment rate, OMX Helsinki stock index, and real exchange rate of Finland.
+I will follow the \citeauthor{kaenzig2022}'s formulation as having the following endogenous variables. The model consists of two different sections, the carbon section, which consists of consumer price index of energy and the disaggregated greenhouse gas emission time series. The macroeconomic section which is consists of head line consumer price index, industrial production index, 3 month Euribor rate, unemployment rate, OMX Helsinki stock index, and real exchange rate of Finland.
 
 
 $$
@@ -27,31 +29,53 @@ The greenhouse gas emission data is reported annually, due to the commitments th
 
 Känzig solved the problem by using the Chow-Lin dissaggregation method. Accuracy of the disaggregation can be increased by additional relevant indicators that are reported in the desired frequency and are also correlated with the target values (Chow and Lin, 1971). Känzig used as his indicators the Consumer price index of energy products and industrial production index. As can be seen from the Figure 1, the Finnish non-renewable energy production is highly seasonal.   
 
-![Monthly energy production in Finland by energy source](Slide_pictures/energy.png){}
+\begin{figure}
+
+\includegraphics{04-data_files/figure-latex/energy-share-1} \hfill{}
+
+\caption{Monthly energy production in Finland by energy source. The increased share of renewable energy production and decreased total energy production  have been the prevalent trends after the year 2010.}(\#fig:energy-share)
+\end{figure}
 
 
 
+As a first impulse I wanted to capture this seasonal variation to my disaggregated time series. That is why I produced three different dissaggregated time series of greenhouse gas emissions: a dummy disaggregation without indicators, with similar indicators that Känzig used, and with the additional information of the amounts of non-renewable energy production. The results of these three disaggregations can be seen from Figure \@ref(fig:ghgdisagg).
 
 
-As a first impulse I wanted to capture this seasonal variation to my disaggregated time series. That is why I produced three different dissaggregated time series of greenhouse gas emissions: a dummy disaggregation without indicators, with similar indicators that Känzig used, and with the additional information of the amounts of non-renewable energy production. The results of these three disaggregations can be seen from Figure 2.
 
-![Different disaggregation strategies from yearly values of the GHG emissions in Finland to monthly](Slide_pictures/ghg_plot.png){}
+\begin{figure}
 
-The dummy disaggregation strategy produces a yearly value divided by 12 as it's estimation, this can be considered also as the reported value, when we analyse the other two estimates. The disaggregation produced following in the footsteps of Känzig produces a relatively smooth time series that could be understood as a trend time series. The final disaggregation is the one with additional information. The values are varying wildly between summer months and winter months, this is due to the variation in the usage of non-renewable energy sources, that can be seen in the figure 1.
+\includegraphics{04-data_files/figure-latex/ghgdisagg-1} \hfill{}
 
-Even though the my estimate might be more truthful in capturing the actual monthly greenhouse gas emissions. It also produces more noise to the model and in the next subchapter I will discuss the problems of not using trended values. In appendix x can be seen the impulse response functions that are produced with my estimate, and how it produces seasonal noise.
+\caption{Different disaggregation strategies from yearly values of the GHG emissions in Finland to monthly values. The additional data transforms the disaggregation to aggressively seasonal.}(\#fig:ghgdisagg)
+\end{figure}
 
-## Using trend values
+
+The dummy disaggregation strategy produces a yearly value divided by 12 as it's estimation, this can be considered also as the reported value, when we analyse the other two estimates. The disaggregation produced following in the footsteps of Känzig produces a relatively smooth time series that could be understood as a trend time series. The final disaggregation is the one with additional information. The values are varying wildly between summer months and winter months, this is due to the variation in the usage of non-renewable energy sources, that can be seen in the figure \@ref(fig:energy-share).
+
+Even though the my estimate might be more truthful in capturing the actual monthly greenhouse gas emissions. It also produces more noise to the model and in the subchapter \@ref(trend) I will discuss the problems of not using trended values. In appendix \@ref(seasonapp) can be seen the impulse response functions that are produced with my estimate, and how it produces seasonal noise.
+
+## Using trend values {#trend}
 
 Känzig did not utilise trend values in his analysis, this might not been a significant problem, as he used values that were observed from Europe. This means that the seasonal variation was much lower than in the data that was observed from Finland. The seasonal variation of employment can be seen in the figure 3:
 
-![Monthly observed unemployment rate and the seasonally adjusted trend value in Finland](Slide_pictures/unemp_comparison.png){}
+\begin{figure}
+
+\includegraphics{04-data_files/figure-latex/unemptrend-1} \hfill{}
+
+\caption{Monthly observed unemployment rate and the seasonally adjusted trend values of unemployment rate in Finland.}(\#fig:unemptrend)
+\end{figure}
+
 
 Using the original observed unemployment rate bring similar problems as using the disaggregation with additional information. It brings noise to the impulse responses. The in the appendix x can be seen the impulse responses when using the observed values. In the impulse response is present a substantial contemporaneous shock to the job market that is highly unlikely and thus the model might have captured seasonal variation to the impulse responses of the shocks. These similar problems are also present with the industrial production index.
 
-![Monthly observed industrial production index and the seasonally adjusted trend values in Finland](Slide_pictures/prod_comparison.png){}
+\begin{figure}
 
-The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to eihter measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter x and the one produced with the observed data in the appendix x.   
+\includegraphics{04-data_files/figure-latex/indtrend-1} \hfill{}
+
+\caption{Monthly observed industrial production index and the seasonally adjusted trend values of industrial output in Finland.}(\#fig:indtrend)
+\end{figure}
+
+The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).   
 
 ## Using log-levels
 

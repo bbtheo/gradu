@@ -12,4 +12,4 @@ link-citations: yes
 
 # Introduction {#intro}
 
-The government reforms are a 
+The Finnish government is  
