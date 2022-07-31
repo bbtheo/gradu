@@ -71,7 +71,7 @@ library(readxl)
 ```r
 library(dplyr)
 
-source('gradu_read_data.R')
+source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
 
@@ -92,47 +92,6 @@ The second chapter of Finnish climate policy began in 2005 as the European Union
 Phase I of EU ETS was widely considered the experimentation period where the institutions of ETS were tested; also, in the first two phases, the national governments were left in charge to plan the allocation of these certificates to their respective industries \citep{verde2019free}. These national allocation plans (NAP) were then put under the scrutiny of the European Commission \citep{ellerman2020}. The verification procedure of the NAPs will be a significant source of the carbon policy surprise, which is discussed in chapter 4.
 
 Phase II continued with a similar framework of NAPs and their Commission approvals \citep{ellerman2020}. The governments were allowed to auction up to 10 per cent of the allowances, compared to 5 per cent in Phase I \citep{ellerman2020}. Industrial production slowed abruptly after the financial crisis, which made the cap non-binding, thus reducing the price of the allowances to near zero \citep{verde2019free}. The effects of the different phases to the prices of the emission trading allowances can be seen clearly in Figure \@ref(fig:price-evolution).
-
-
-```r
-library(tidyverse)
-library(ggplot2)
-
-get_eua_data() |> 
-  select(1:5) |> 
-  pivot_longer(-date) |>  
-  ggplot(aes(x = date, y = value, colour = name)) +
-  geom_line() +
-  geom_vline(xintercept = c(lubridate::ymd('20071231'),
-                            lubridate::ymd('20121231'),
-                            lubridate::ymd('20201231')),
-             linetype = "dashed", alpha = 0.5, size = 1)+
-  labs(x = '', y = '€') +
-  annotate(geom = "text",
-           y = 80, 
-           x = lubridate::ymd('20060630'), 
-           label = 'Phase I')+
-  annotate(geom = "text",
-           y = 80, 
-           x = lubridate::ymd('20100630'), 
-           label = 'Phase II')+
-  annotate(geom = "text",
-           y = 80, 
-           x = lubridate::ymd('20170630'), 
-           label = 'Phase III')+
-  annotate(geom = "text",
-           y = 15, 
-           x = lubridate::ymd('20211230'), 
-           label = 'Phase IV')+
-  scale_color_brewer(palette = 'Set1', 
-                     name = '', 
-                     labels = c('Settlement price',
-                                'Front contract',
-                                'Second contract',
-                                'Third contract'))+
-  theme_bw()+
-  theme(legend.position = 'bottom')
-```
 
 ![(\#fig:price-evolution)The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0](01-climate_policy_finland_files/figure-latex/price-evolution-1.pdf) 
 

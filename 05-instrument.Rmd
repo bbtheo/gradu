@@ -8,7 +8,7 @@ library(tidyverse)
 library(readxl)
 library(dplyr)
 
-source('gradu_read_data.R')
+source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
 # Instrument {#inst}
@@ -142,7 +142,6 @@ autocorr <- acf(inst, plot = F, lag.max = 36)
 
 This autocorrelation of 11 lags would mean that the last year's regulatory announcements have are correlating with the announcements at time step $t$. This can be seen from the bar plot below. As the announcements are not equally distributed between months our results may capture some seasonal impacts if the seasonal variation is not adequately handled.
 
-![Monthly annoucements and their effects to the future prices](Slide_pictures/shock_amounts.png){}
 
 ```{r seasonal-variation, message=FALSE, warning=FALSE}
 

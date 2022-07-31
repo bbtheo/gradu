@@ -4,7 +4,7 @@ library(tidyverse)
 library(readxl)
 library(dplyr)
 
-source('gradu_read_data.R')
+source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
 
@@ -26,7 +26,7 @@ Phase I of EU ETS was widely considered the experimentation period where the ins
 
 Phase II continued with a similar framework of NAPs and their Commission approvals \citep{ellerman2020}. The governments were allowed to auction up to 10 per cent of the allowances, compared to 5 per cent in Phase I \citep{ellerman2020}. Industrial production slowed abruptly after the financial crisis, which made the cap non-binding, thus reducing the price of the allowances to near zero \citep{verde2019free}. The effects of the different phases to the prices of the emission trading allowances can be seen clearly in Figure \@ref(fig:price-evolution).
 
-```{r price-evolution, fig.cap="The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0"}
+```{r price-evolution,echo=FALSE,message=FALSE,fig.cap="The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0"}
 
 library(tidyverse)
 library(ggplot2)

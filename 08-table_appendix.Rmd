@@ -11,13 +11,19 @@ library(tidyverse)
 library(readxl)
 library(dplyr)
 
-source('gradu_read_data.R')
+source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
 
 # (APPENDIX) Appendix {-} 
 
+# Data sources {#datasaources}
+
+The data has been collected from...
+
 # Regulatory dates {#regdates}
+
+
 
 ```{r kanzig-reg, warning=FALSE}
 
@@ -27,9 +33,9 @@ readxl::read_xlsx('data/kaenzig_reg_dates.xlsx') %>%
                longtable = TRUE) %>%
   kableExtra::column_spec(2, width = "35em") %>% 
   kableExtra::kable_styling(position = "left",
-                            latex_options = c("hold_position", "repeat_header","striped", "scale_down"), 
+                            latex_options = c("hold_position", "repeat_header", "scale_down"), 
                             full_width = F,
-                            font_size = 9)
+                            font_size = 10)
 
 ```
 
@@ -37,14 +43,14 @@ readxl::read_xlsx('data/kaenzig_reg_dates.xlsx') %>%
 ```{r my-reg, warning=FALSE}
 
 readxl::read_xlsx('data/my_reg_dates.xlsx') %>% 
-  kableExtra::kbl(caption = 'Regulatory dates found using similar methodology as \\citet{kaenzig2022}', 
+  kableExtra::kbl(caption = 'Regulatory dates found using similar methodology as \\citet{kaenzig2022} did.', 
                booktabs = TRUE,
                longtable = TRUE) %>%
   kableExtra::column_spec(2, width = "35em") %>% 
   kableExtra::kable_styling(position = "left",
-                            latex_options = c("hold_position", "repeat_header","striped", "scale_down"), 
+                            latex_options = c("hold_position", "repeat_header", "scale_down"), 
                             full_width = F,
-                            font_size = 9)
+                            font_size = 10)
 
 ```
 

@@ -64,32 +64,25 @@ The major problem that the instrument could have is that it would have a is the 
 
 \includegraphics{05-instrument_files/figure-latex/acfplot-1} \hfill{}
 
-\caption{Autocorrelation plot of the instrumental variable.}(\#fig:acfplot-1)
-\end{figure}
-\begin{figure}
-
-\includegraphics{05-instrument_files/figure-latex/acfplot-2} \hfill{}
-
-\caption{Autocorrelation plot of the instrumental variable.}(\#fig:acfplot-2)
+\caption{Autocorrelation plot of the instrumental variable.}(\#fig:acfplot)
 \end{figure}
 
 \begin{figure}
 
 \includegraphics{05-instrument_files/figure-latex/pacfplot-1} \hfill{}
 
-\caption{Partial autocorrelation plot of the instrumental variable.}(\#fig:pacfplot-1)
-\end{figure}
-\begin{figure}
-
-\includegraphics{05-instrument_files/figure-latex/pacfplot-2} \hfill{}
-
-\caption{Partial autocorrelation plot of the instrumental variable.}(\#fig:pacfplot-2)
+\caption{Partial autocorrelation plot of the instrumental variable.}(\#fig:pacfplot)
 \end{figure}
 
 This autocorrelation of 11 lags would mean that the last year's regulatory announcements have are correlating with the announcements at time step $t$. This can be seen from the bar plot below. As the announcements are not equally distributed between months our results may capture some seasonal impacts if the seasonal variation is not adequately handled.
 
-![Monthly annoucements and their effects to the future prices](Slide_pictures/shock_amounts.png){}
+
+
+\begin{flushleft}\includegraphics{05-instrument_files/figure-latex/seasonal-variation-1} \end{flushleft}
+
 
 This is an additional reason why there is noticeable seasonal fluctuation in the appendix \@ref(seasonapp). 
+
+
 
 \newpage

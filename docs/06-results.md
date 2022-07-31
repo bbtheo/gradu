@@ -1,3 +1,5 @@
+
+
 # Results {#results}
 
 ## First stage {#firststage}
@@ -8,9 +10,16 @@ For my model the $F = 10.99$, which would imply that the instrument is strong en
 
 ## Effects to Finnish macroeconomy 
 
-In the following section I will present the resulting impulse response functions to a carbon policy shock. The solid black line is a point estimate and the darker and lighter regions are the 68 and 90 per cent confidence bands respectfully. These confidence bands are calculated with a moving block bootstrap which was first brought forth by Jentsch and Lunsdorf (2019). ^[The major advantage of moving block bootstrap comparing it to wild bootstrap is that it will produce accurate confidence intervals. As the wild bootstrap will produce unaccurate impulse response functions to SVAR-IV (Jentsch and Lunsdorf, 2016). The code used in my thesis is heavily relying on Känzig (2021) reproduction files found [here](https://github.com/dkaenzig/replicationOilSupplyNews). If found all the mistakes are naturally mine.] With a block size of 20 and with $10 000$ bootstrap replications.  
+In the following section I will present the resulting impulse response functions to a carbon policy shock. The solid black line is a point estimate and the darker and lighter regions are the 68 and 90 per cent confidence bands respectfully. These confidence bands are calculated with a moving block bootstrap which was first brought forth by Jentsch and Lunsdorf (2019). ^[The major advantage of the moving block bootstrap method, comparing it to the wild bootstrap method, is that it will produce accurate confidence intervals. As the wild bootstrap will produce unaccurate impulse response functions to SVAR-IV (Jentsch and Lunsdorf, 2016). The code used in my thesis is heavily relying on Känzig (2021) reproduction files found [here](https://github.com/dkaenzig/replicationOilSupplyNews). If found all the mistakes are naturally mine.] With a block size of 20 and with $10 000$ bootstrap replications.  
 
-![Impulse responses to a Carbon policy shock](Slide_pictures/final_irf.png){}
+\begin{figure}
+
+\includegraphics{06-results_files/figure-latex/irf-1} \hfill{}
+
+\caption{Impulse response functions from carbon policy shocks to Economic indicators of Finland}(\#fig:irf)
+\end{figure}
+
+in the figure \@ref(fig:irf)
 
 The negative carbon policy shock is normalised to have a effect of $1\%$ in increasing the price of energy. As the energy components, greenhouse gas emission, headline HICP, industrial output index,  OMX Helsinki 25 stock index and the real broad exchange rate index are all handled in log-levels can the plots be interpreted as percentual changes. In contrast the unemployment rate and the 3 month Euribor interest rate are handled in percentage points and thus the plots represent changes of percentage points.
 

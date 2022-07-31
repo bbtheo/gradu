@@ -137,10 +137,11 @@ get_ghg_data<-function(){
 
 get_trend_unemployment <- function(){
   readxl::read_xlsx("data/EUROSTAT_UNEMP_SEASON.xlsx", sheet = "Sheet 1", skip = 11)%>%
-    mutate(TIME = lubridate::ym(TIME),
-           ...2 = as.numeric(...2))%>%
-    rename(Date = TIME,
-           unemp_adj = ...2)%>%
+    janitor::clean_names() %>% 
+    mutate(time = lubridate::ym(time),
+           x2 = as.numeric(x2))%>%
+    rename(Date = time,
+           unemp_adj = x2)%>%
     dplyr::select(Date, unemp_adj) %>%
     na.omit()
 }
@@ -178,7 +179,7 @@ get_log_data <-function(){    # changes the raw values of useful data to log-lev
            omx_hel_25        = log(omx_hel_25)*100,
            GHG_emission      = log(GHG_emission)*100,
            RBFIBIS           = log(RBFIBIS)*100,
-           GHG_Kanzig_method = log(GHG_Kanzig_method)*100,
+           GHG_Känzig_method = log(GHG_Känzig_method )*100,
            ind_adj           = log(ind_adj)*100)
 }
 

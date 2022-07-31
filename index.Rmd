@@ -8,8 +8,10 @@ linestretch: 1.5
 link-citations: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, 
+```{r setup, message=FALSE, warning=FALSE, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE,
+                      warning = FALSE,
                       fig.width = 7,
                       fig.height = 5,
                       fig.align = 'left')
@@ -18,7 +20,7 @@ library(tidyverse)
 library(readxl)
 library(dplyr)
 
-source('gradu_read_data.R')
+source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
 # Introduction {#intro}

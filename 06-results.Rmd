@@ -1,3 +1,16 @@
+```{r setupresult, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      fig.width = 7,
+                      fig.height = 5,
+                      fig.align = 'left')
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+library(dplyr)
+
+source('gradu_read_data.R', encoding = 'UTF-8')
+```
+
 # Results {#results}
 
 ## First stage {#firststage}
@@ -8,9 +21,82 @@ For my model the $F = 10.99$, which would imply that the instrument is strong en
 
 ## Effects to Finnish macroeconomy 
 
-In the following section I will present the resulting impulse response functions to a carbon policy shock. The solid black line is a point estimate and the darker and lighter regions are the 68 and 90 per cent confidence bands respectfully. These confidence bands are calculated with a moving block bootstrap which was first brought forth by Jentsch and Lunsdorf (2019). ^[The major advantage of moving block bootstrap comparing it to wild bootstrap is that it will produce accurate confidence intervals. As the wild bootstrap will produce unaccurate impulse response functions to SVAR-IV (Jentsch and Lunsdorf, 2016). The code used in my thesis is heavily relying on Känzig (2021) reproduction files found [here](https://github.com/dkaenzig/replicationOilSupplyNews). If found all the mistakes are naturally mine.] With a block size of 20 and with $10 000$ bootstrap replications.  
+In the following section I will present the resulting impulse response functions to a carbon policy shock. The solid black line is a point estimate and the darker and lighter regions are the 68 and 90 per cent confidence bands respectfully. These confidence bands are calculated with a moving block bootstrap which was first brought forth by Jentsch and Lunsdorf (2019). ^[The major advantage of the moving block bootstrap method, comparing it to the wild bootstrap method, is that it will produce accurate confidence intervals. As the wild bootstrap will produce unaccurate impulse response functions to SVAR-IV (Jentsch and Lunsdorf, 2016). The code used in my thesis is heavily relying on Känzig (2021) reproduction files found [here](https://github.com/dkaenzig/replicationOilSupplyNews). If found all the mistakes are naturally mine.] With a block size of 20 and with $10 000$ bootstrap replications.  
 
-![Impulse responses to a Carbon policy shock](Slide_pictures/final_irf.png){}
+```{r irf, message=FALSE, warning=FALSE,  fig.width = 6 , fig.height=8, fig.cap='Impulse response functions from carbon policy shocks to Economic indicators of Finland'}
+
+mat<-R.matlab::readMat('data/IRFsbench.mat')
+
+logful <- get_log_data()
+
+y <- logful[,c(5,15,4,16,3,17,7,14)]
+mat$colnames <- colnames(y)
+
+
+
+base<-cbind(c(0:50), mat$IRFs.base)
+colnames(base) <- c('month', mat$colnames)
+base <- tibble::as_tibble(base) %>%
+  pivot_longer(-month) %>%
+  mutate(type = 'base')
+
+upper<-cbind(c(0:50), mat$IRFsupper.base)
+colnames(upper) <- c('month', mat$colnames)
+upper <- tibble::as_tibble(upper) %>%
+  pivot_longer(-month) %>%
+  mutate(type = 'upper')
+
+lower<-cbind(c(0:50), mat$IRFslower.base)
+colnames(lower) <- c('month', mat$colnames)
+lower <- tibble::as_tibble(lower) %>%
+  pivot_longer(-month) %>%
+  mutate(type = 'lower')
+
+upper2<-cbind(c(0:50), mat$IRFsupper2.base)
+colnames(upper2) <- c('month', mat$colnames)
+upper2 <- tibble::as_tibble(upper2)%>%
+  pivot_longer(-month) %>%
+  mutate(type = 'upper2')
+
+lower2<-cbind(c(0:50), mat$IRFslower2.base)
+colnames(lower2) <- c('month', mat$colnames)
+lower2 <- tibble::as_tibble(lower2) %>%
+  pivot_longer(-month) %>%
+  mutate(type = 'lower2')
+
+data<-base %>% 
+  rbind(upper) %>% 
+  rbind(lower) %>%
+  rbind(upper2)%>%
+  rbind(lower2)%>%
+  pivot_wider(names_from = type)
+
+data %>%
+  mutate(across(name, factor, levels=mat$colnames)) %>%
+  ggplot(aes(x = month))+
+  geom_ribbon(aes(ymin = lower, ymax = upper),fill = '#3e99d6', alpha = 0.4)+
+  geom_ribbon(aes(ymin = lower2, ymax = upper2),fill = '#3e99d6', alpha = 0.75)+
+  geom_line(aes(y = base), size = 1) +
+  geom_hline(yintercept = 0, linetype="dashed", alpha = 0.5)+
+  theme_bw()+
+  facet_wrap(~name, 
+             ncol = 2, 
+             scales = 'free_y',
+             labeller = as_labeller(
+               c(HCIP_energy = "Energy component of HICP",
+               GHG_Känzig_method = "GHG emissions", 
+               HCIP = "HICP",
+               ind_adj = "Industrial output",
+               Euribor_3kk = "3 month Euribor rate",
+               unemp_adj = "Unemployment rate",
+               omx_hel_25 = "OMX Helsinki 25 index",
+               RBFIBIS = "Real Broad Effective Exchange Rate")
+             ))+
+  labs(y = '', x = 'Months')
+
+```
+
+in the figure \@ref(fig:irf)
 
 The negative carbon policy shock is normalised to have a effect of $1\%$ in increasing the price of energy. As the energy components, greenhouse gas emission, headline HICP, industrial output index,  OMX Helsinki 25 stock index and the real broad exchange rate index are all handled in log-levels can the plots be interpreted as percentual changes. In contrast the unemployment rate and the 3 month Euribor interest rate are handled in percentage points and thus the plots represent changes of percentage points.
 
