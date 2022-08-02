@@ -1,1 +1,1 @@
-bookdown::render_book('index.Rmd', 'bookdown::pdf_document2')
+bookdown::render_book('index.Rmd', 'bookdown::html_document2')
