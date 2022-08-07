@@ -34,4 +34,5 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
  - I will add here the local projection impulse responses as used in the supplementary material of @plagborg2021local
 
+\newpage
 \singlespacing

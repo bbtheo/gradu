@@ -21,6 +21,8 @@ source('gradu_read_data.R', encoding = 'UTF-8')
 
 The data has been collected from...
 
+\newpage
+
 # Regulatory dates {#regdates}
 
 
@@ -56,3 +58,4 @@ readxl::read_xlsx('data/my_reg_dates.xlsx') %>%
 
 
 \endgroup
+\newpage

@@ -1,5 +1,5 @@
 ---
-documentclass: report
+documentclass: article
 bibliography: bibliography.bib
 biblio-style: "apalike"
 fontsize: 12pt
@@ -8,10 +8,12 @@ linestretch: 1.5
 link-citations: yes
 ---
 
-
+\newpage
 
 # Introduction {#intro}
 
 
 
-The Finnish government is  
+Introducing my thesis...
+
+\newpage

@@ -1,9 +1,5 @@
 # Conclusion
 
-
-  - conlcuded
+  - conlcusion to my thesis
   
-
-# Bibliography
-
-\bibliography{bibliography}
+\newpage

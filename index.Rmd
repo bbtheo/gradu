@@ -1,5 +1,5 @@
 ---
-documentclass: report
+documentclass: article
 bibliography: bibliography.bib
 biblio-style: "apalike"
 fontsize: 12pt
@@ -8,15 +8,12 @@ linestretch: 1.5
 link-citations: yes
 ---
 
-<<<<<<< HEAD
-```{r setup, include=FALSE}
-=======
-
+\newpage
 
 # Introduction {#intro}
 
 ```{r setup-index, results=FALSE, message=FALSE, warning=FALSE, include=FALSE, echo=FALSE}
->>>>>>> cb4b9d997e39d2931615b2cf6a840833c3f8c7f6
+
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE,
@@ -31,4 +28,6 @@ library(dplyr)
 source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
-The Finnish government is  
+Introducing my thesis...
+
+\newpage

@@ -1,6 +1,6 @@
 # Identification of the structural shock vector from the instrumental variable
 
-As note in the chapter x the structural shock $s_1$ can be identified to the tune of size sing using the external instrument. In this chapter I will mainly follow the example of Känzig (2021) and occasionally Stock and Watson (2018) and with some additions also additions from Montiel-Olea et al. (2021). As stated in the chapter \@ref(extinst) the external instrument method is based on two foundational assumptions. The relevance assumption stated in equation \@ref(eq:cond1) and exogeneity assumption previously stated in the equation \@ref(eq:cond2):
+As note in the chapter \@ref(inst) the structural shock $s_1$ can be identified to the tune of size sing using the external instrument. In this chapter I will mainly follow the example of @kaenzig2021 and occasionally @stock2018 and with some additions also additions from @montiel2021. As stated in the chapter \@ref(extinst) the external instrument method is based on two foundational assumptions. The relevance assumption stated in equation \@ref(eq:cond1) and exogeneity assumption previously stated in the equation \@ref(eq:cond2):
 
 $$
 \begin{aligned}
@@ -189,3 +189,5 @@ x \\
 $$
 
 It can be then seen that after the $s_{1,1}$ is know it is trivial to transform between the two strategies of normalisation. This is how I used the code that was inspired from the @kaenzig2021 replication files that used an similar strategy that @kaenzig2022.
+
+\newpage

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-```{r setup1, include=FALSE, cache=TRUE}
-knitr::opts_chunk$set(echo = FALSE)
 
-=======
 ```{r setup-clipol, results=FALSE, message=FALSE, warning=FALSE, include=FALSE, echo=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
@@ -10,7 +6,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.width = 7,
                       fig.height = 5,
                       fig.align = 'left')
->>>>>>> cb4b9d997e39d2931615b2cf6a840833c3f8c7f6
+
 library(ggplot2)
 library(tidyverse)
 library(readxl)
@@ -19,11 +15,7 @@ library(dplyr)
 source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cb4b9d997e39d2931615b2cf6a840833c3f8c7f6
 # Climate policy in Finland {#clipolfi}
 
 In this chapter, I will provide a short introduction to the climate policy in Finland before the implementation of the European Union emission trading system and a brief introduction of the different phases of the European Union emission trading system. The effects of these regulatory updates are discussed in the following chapter, but a short synopsis of the regulatory evolution is necessary for the reader to fully appreciate the economic consequences of the policy shocks produced by said institutions. 
@@ -88,3 +80,5 @@ get_eua_data()  %>%
 The oversupply of ETS allowances in late Phase II led to the reforms in Phase III. The most substantial updates to the ETS were the abolition of the NAP and the resulting centralisation of the system by adopting a single EU-wide cap. This cap was planned to reduce yearly by a linear amount that was decided to be 1.74 per cent of the year 2010 total allowances. \citep{ellerman2020}. This linear decrease would lead to a total of 21 per cent reduction by 2020 in emissions in the markets governed by the ETS when compared to the levels in 2005 \citep{verde2019free}. Another major reform enacted in Phase III was the phasing out of the free allocation to the energy sector in 2013 and plans of enacting this also to the remaining industrial sectors by 2027 \citep{ellerman2020}. The effects of these strict system overhauls can also be seen in figure 1, where the news of future updates can be seen moving the price of futures before it is realised at the spot price of the allowances. This is the essence behind the carbon policy surprise series and its usefulness in identifying the structural shocks in the SVAR model in chapter 5.
 
 The changes brought by the Phase IV of the European Union ETS can be characterised by a more ambitious pace of allowance reductions and more stringent rules for the free allocations in the remaining sectors that still had them \citep{verde2019free}. This ambitious pace was countervailed by diverting the auction revenues to be used to support energy sector modernisation by the innovation fund and modernisation fund \citep{verde2019free}. As Phase IV has only recently begun, the full implications of the rule changes are yet to be seen. Another dimension that will test the resolve of the European decision-makers is higher energy costs and the effects of those on their constituents.
+
+\newpage

@@ -59,3 +59,5 @@ Other possible strategies to identify the structural shocks would be to use hete
 When comparing the results of SVAR-IV to ones produced with local projection the variance of the impulse response functions are lower, but with a trade off of bias in the results if the VAR is noninvertible [@wolf2020svar]. In the appendix \@ref(localprojapp) I will provide the impulse responses that are produced via Local projection-instrument variable approach, as an robustness check for the results of the baseline SVAR-IV model. The results we see are at least notionally similar and thus provide additional evidence that the baseline model can be trusted. 
 
 Even though these both would have been a valid choice as an instrument, but as one the main tasks of this thesis is to quasi-replicate the findings of \citeauthor{kaenzig2022} I will continue with the SVAR-Iv that my findings are as comparable as possible.  Additional reasons why I selected the SVAR-IV as my approach was for the reliability and the efficiency, which are paramount in estimating the responses to a shock from a short sample. 
+
+\newpage

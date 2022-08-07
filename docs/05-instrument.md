@@ -44,17 +44,17 @@ This monthly surprise series is an ideal external instrument due to the exogenei
 
 ## Regulatory Dates
 
-The identification of regulatory events is a vital part of the building of this instrument. In the figure 1 the values of the $\text{CPSurprise}_m$ can be clearly seen.
+The identification of regulatory events is a vital part of the building of this instrument. In the figure \@ref(fig:instplot) the values of the $\text{CPSurprise}_m$ can be clearly seen.
 
 
 \begin{figure}
 
 \includegraphics{05-instrument_files/figure-latex/instplot-1} \hfill{}
 
-\caption{Monthly carbon policy surprise series and some policy events that produced substantial market reactions. The dashed line deliniates between the policy surprise produced by \citet{kaenzig2022} and the author.}(\#fig:instplot)
+\caption{Monthly carbon policy surprise series and some policy events that produced substantial market reactions. The dashed line deliniates between the policy surprise produced by \citet{kaenzig2022} and the researcher.}(\#fig:instplot)
 \end{figure}
 
-The dates
+The all the regulatory dates are listed in the appendix \@ref(regdates). As in the figure \@ref(fig:instplot), the dates produced in @kaenzig2022 and by me are clearly separated.
 
 ## Diagnostics of the Surprise as an external instrument {#diagextinst}
 
@@ -82,7 +82,5 @@ This autocorrelation of 11 lags would mean that the last year's regulatory annou
 
 
 This is an additional reason why there is noticeable seasonal fluctuation in the appendix \@ref(seasonapp). 
-
-
 
 \newpage

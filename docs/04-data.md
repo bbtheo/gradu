@@ -19,7 +19,7 @@ y_t =
 \end{bmatrix}
 $$
 
-The sources of these endogenous variables can be found from the appendix X. The sample dates of my variables are from the begining of year 2000 to the end of third quarter in 2021. All the endogenous variables are also reported in monthly timeseries. The Greenhouse gas emissions are an exception to this and they have to be disaggregated to a monthly time series.    
+The sources of these endogenous variables can be found from the appendix \@ref(datasaources). The sample dates of my variables are from the begining of year 2000 to the end of third quarter in 2021. All the endogenous variables are also reported in monthly timeseries. The Greenhouse gas emissions are an exception to this and they have to be disaggregated to a monthly time series.    
 
 Following Känzig (2022) example all the variables have been, except the 3 month Euribor and Unemployment rate stored as log-levels. The reasoning behind all of these choices is elaborated in the following subchapters.
 
@@ -79,10 +79,8 @@ The problems are similar whether the variable is industrial production index, un
 
 ## Using log-levels
 
-MIKSIIIIII? 
+ - add reasons to using the values in log-levels 
 
-- ne antaa korvaamatonta tietoa mitä ei voida saada vain muutoksen suuruudesta.
 
-- tämä tietysti antaa 
 
 \newpage

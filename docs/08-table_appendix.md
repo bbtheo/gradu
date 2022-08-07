@@ -10,6 +10,8 @@
 
 The data has been collected from...
 
+\newpage
+
 # Regulatory dates {#regdates}
 
 
@@ -227,3 +229,4 @@ Dates & Event description & Type\\
 
 
 \endgroup
+\newpage
