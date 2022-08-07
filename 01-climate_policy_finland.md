@@ -1,13 +1,4 @@
-```{r setup1, include=FALSE, cache=TRUE}
-knitr::opts_chunk$set(echo = FALSE)
 
-library(ggplot2)
-library(tidyverse)
-library(readxl)
-library(dplyr)
-
-source('gradu_read_data.R', encoding = 'UTF-8')
-```
 
 # Climate policy in Finland {#clipolfi}
 
@@ -27,48 +18,32 @@ Phase I of EU ETS was widely considered the experimentation period where the ins
 
 Phase II continued with a similar framework of NAPs and their Commission approvals \citep{ellerman2020}. The governments were allowed to auction up to 10 per cent of the allowances, compared to 5 per cent in Phase I \citep{ellerman2020}. Industrial production slowed abruptly after the financial crisis, which made the cap non-binding, thus reducing the price of the allowances to near zero \citep{verde2019free}. The effects of the different phases to the prices of the emission trading allowances can be seen clearly in Figure \@ref(fig:price-evolution).
 
-```{r price-evolution,echo=FALSE,message=FALSE,fig.cap="The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0"}
-
-library(tidyverse)
-library(ggplot2)
-
-get_eua_data()  %>%  
-  select(1:5) %>% 
-  pivot_longer(-date) %>%  
-  ggplot(aes(x = date, y = value, colour = name)) +
-  geom_line() +
-
-  geom_vline(xintercept = c(lubridate::ymd('20071231'),
-                            lubridate::ymd('20121231'),
-                            lubridate::ymd('20201231')),
-             linetype = "dashed", alpha = 0.5, size = 1)+
-  labs(x = '', y = '€') +
-  annotate(geom = "text",
-           y = 80, 
-           x = lubridate::ymd('20060630'), 
-           label = 'Phase I')+
-  annotate(geom = "text",
-           y = 80, 
-           x = lubridate::ymd('20100630'), 
-           label = 'Phase II')+
-  annotate(geom = "text",
-           y = 80, 
-           x = lubridate::ymd('20170630'), 
-           label = 'Phase III')+
-  annotate(geom = "text",
-           y = 15, 
-           x = lubridate::ymd('20211230'), 
-           label = 'Phase IV')+
-  scale_color_brewer(palette = 'Set1', 
-                     name = '', 
-                     labels = c('Settlement price',
-                                'Front contract',
-                                'Second contract',
-                                'Third contract'))+
-  theme_bw()+
-  theme(legend.position = 'bottom')
 
 ```
+## Warning: package 'tidyverse' was built under R version 4.0.5
+```
+
+```
+## Warning: package 'tidyr' was built under R version 4.0.5
+```
+
+```
+## Warning: package 'readr' was built under R version 4.0.5
+```
+
+```
+## Warning: package 'purrr' was built under R version 4.0.5
+```
+
+```
+## Warning: package 'stringr' was built under R version 4.0.5
+```
+
+```
+## Warning: package 'forcats' was built under R version 4.0.5
+```
+
+![(\#fig:price-evolution)The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0](01-climate_policy_finland_files/figure-latex/price-evolution-1.pdf) 
 
 The oversupply of ETS allowances in late Phase II led to the reforms in Phase III. The most substantial updates to the ETS were the abolition of the NAP and the resulting centralisation of the system by adopting a single EU-wide cap. This cap was planned to reduce yearly by a linear amount that was decided to be 1.74 per cent of the year 2010 total allowances. \citep{ellerman2020}. This linear decrease would lead to a total of 21 per cent reduction by 2020 in emissions in the markets governed by the ETS when compared to the levels in 2005 \citep{verde2019free}. Another major reform enacted in Phase III was the phasing out of the free allocation to the energy sector in 2013 and plans of enacting this also to the remaining industrial sectors by 2027 \citep{ellerman2020}. The effects of these strict system overhauls can also be seen in figure 1, where the news of future updates can be seen moving the price of futures before it is realised at the spot price of the allowances. This is the essence behind the carbon policy surprise series and its usefulness in identifying the structural shocks in the SVAR model in chapter 5.
 

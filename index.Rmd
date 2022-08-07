@@ -8,7 +8,7 @@ linestretch: 1.5
 link-citations: yes
 ---
 
-```{r setup, message=FALSE, warning=FALSE, include=FALSE, echo=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       message = FALSE,
                       warning = FALSE,
