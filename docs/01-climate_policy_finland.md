@@ -1,78 +1,5 @@
 
-```r
-library(ggplot2)
-```
 
-```
-## Warning: package 'ggplot2' was built under R version 4.1.3
-```
-
-```r
-library(tidyverse)
-```
-
-```
-## Warning: package 'tidyverse' was built under R version 4.1.3
-```
-
-```
-## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
-```
-
-```
-## v tibble  3.1.7     v dplyr   1.0.9
-## v tidyr   1.2.0     v stringr 1.4.0
-## v readr   2.1.2     v forcats 0.5.1
-## v purrr   0.3.4
-```
-
-```
-## Warning: package 'tibble' was built under R version 4.1.3
-```
-
-```
-## Warning: package 'tidyr' was built under R version 4.1.3
-```
-
-```
-## Warning: package 'readr' was built under R version 4.1.3
-```
-
-```
-## Warning: package 'purrr' was built under R version 4.1.3
-```
-
-```
-## Warning: package 'dplyr' was built under R version 4.1.3
-```
-
-```
-## Warning: package 'stringr' was built under R version 4.1.3
-```
-
-```
-## Warning: package 'forcats' was built under R version 4.1.3
-```
-
-```
-## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-```
-
-```r
-library(readxl)
-```
-
-```
-## Warning: package 'readxl' was built under R version 4.1.3
-```
-
-```r
-library(dplyr)
-
-source('gradu_read_data.R', encoding = 'UTF-8')
-```
 
 
 # Climate policy in Finland {#clipolfi}
@@ -93,7 +20,12 @@ Phase I of EU ETS was widely considered the experimentation period where the ins
 
 Phase II continued with a similar framework of NAPs and their Commission approvals \citep{ellerman2020}. The governments were allowed to auction up to 10 per cent of the allowances, compared to 5 per cent in Phase I \citep{ellerman2020}. Industrial production slowed abruptly after the financial crisis, which made the cap non-binding, thus reducing the price of the allowances to near zero \citep{verde2019free}. The effects of the different phases to the prices of the emission trading allowances can be seen clearly in Figure \@ref(fig:price-evolution).
 
-![(\#fig:price-evolution)The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0](01-climate_policy_finland_files/figure-latex/price-evolution-1.pdf) 
+\begin{figure}
+
+\includegraphics{01-climate_policy_finland_files/figure-latex/price-evolution-1} \hfill{}
+
+\caption{The evolution of the EU Emission trading system spot price and different future lengths prices through the different phases of the system. 2.0}(\#fig:price-evolution)
+\end{figure}
 
 The oversupply of ETS allowances in late Phase II led to the reforms in Phase III. The most substantial updates to the ETS were the abolition of the NAP and the resulting centralisation of the system by adopting a single EU-wide cap. This cap was planned to reduce yearly by a linear amount that was decided to be 1.74 per cent of the year 2010 total allowances. \citep{ellerman2020}. This linear decrease would lead to a total of 21 per cent reduction by 2020 in emissions in the markets governed by the ETS when compared to the levels in 2005 \citep{verde2019free}. Another major reform enacted in Phase III was the phasing out of the free allocation to the energy sector in 2013 and plans of enacting this also to the remaining industrial sectors by 2027 \citep{ellerman2020}. The effects of these strict system overhauls can also be seen in figure 1, where the news of future updates can be seen moving the price of futures before it is realised at the spot price of the allowances. This is the essence behind the carbon policy surprise series and its usefulness in identifying the structural shocks in the SVAR model in chapter 5.
 
