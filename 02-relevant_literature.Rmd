@@ -18,13 +18,13 @@ This is in stark contrast with the main inspiration of my thesis which is the re
 
 ## Previous SVAR-IV research {#prevsvar}
 
-A key study pioneering the usage of macroeconomic news as an instrument was the done by @romer2010macroeconomic. The authors utilised the record of post-war tax reforms, and the context of these reforms [@romer2010macroeconomic]. Using of narrative methods the researchers could get substantial and long lasting  effects to production and economic activity [@romer2010macroeconomic]. Another integral part of the methodology used by @kaenzig2022 is the SVAR based analysis that wa  
+Prior to development of the instrument variable based identification of the structural vector autoregression method, which will be discussed at length in the chapter \@ref(econometrics). The structural vector autoregression models were widely used to analyse macroeconomic phenomena. They are an insightful tool to analyse dynamic interdependent systems. This is why they have been deployd for example in macroeconomics to study the responses to changes in monetary policy [@wolf2020svar]. Likewise, another widely researched field for macroeconomists is the reactions to the oil price shocks [@kilian2009not].
 
-Prior to development of the instrument variable based identification of the structural vector autoregression method, which will be discussed at length in the chapter \@ref(econometrics). The structural vector autoregression models were widely used to analyse macroeconomic phenomena. They are an insightful tool to analyse dynamic interdependent systems. This is why they have been deployd for example in macroeconomics to study the responses to changes in monetary policy [@wolf2020svar]. Likewise, another widely researched field for macroeconomists is the reactions to the oil price shocks [@kilian2009not]. 
+A key study pioneering the usage of macroeconomic news as an instrument was the done by @romer2010macroeconomic. The authors utilised the record of post-war tax reforms, and the context of these reforms [@romer2010macroeconomic]. Using of narrative methods the researchers could get substantial and long lasting  effects to production and economic activity [@romer2010macroeconomic]. They found out that changes in tax rates of $20\text{th}$ century United States had substantial impulse responses to the total output [@romer2010macroeconomic].      
 
 Both previous research traditions that have utilised SVARs have in common that the identification of the shocks is difficult due to the endogenous nature of these shocks [@kaenzig2021]. An ingenious way of sidestepping this problem of endogeneity was answered by Känzig in his previous research in the realms of and oil and carbon policies \citep{kaenzig2022,kaenzig2021}. and this identification strategy will be further elaborated in the chapter \@ref(inst) which is fully dedicated to the instrument variable [@kaenzig2022].
 
-The SVAR-IV was first introduced in lecture by \citet{stock2008s}. It was an ingenious way to identify the structural shocks by using an external instrument \citep{stock2008s}. The methodology was developed further in research by \citet{stock2012disentangling} where they illustrated the propagation channels of the recession of the years 2007-2009. The evidence presented in the research of Stock and Watson supports the idea that financial collapse and tight monetary policy had significant impact on the slow economic recovery \citep{stock2012disentangling}.
+Another integral part of the methodology used by @kaenzig2022 is the SVAR-IV based analysis that was first introduced in lecture by \citet{stock2008s}. It was an ingenious way to identify the structural shocks by using an external instrument \citep{stock2008s}. The methodology was developed further in research by \citet{stock2012disentangling} where they illustrated the propagation channels of the recession of the years 2007-2009. The evidence presented in the research of Stock and Watson supports the idea that financial collapse and tight monetary policy had significant impact on the slow economic recovery \citep{stock2012disentangling}.
 
 The SVAR-IV was used in the Finnish context by \citet{keranen2020identification}, where they examined the size of the fiscal multiplier of government spending. The most important finding in this study, according to the authors, was the formation of an instrument variable \citep{keranen2020identification}. This instrument variable can have use in future research. The authors indicated a note of caution whether the instrument should be used as an external instrument as used by \citet{stock2008s,stock2012disentangling} \citep{keranen2020identification}.
 
@@ -35,8 +35,10 @@ Prior to the research I am replicating in this thesis @kaenzig2021 studied the e
 
  - add @stock2018 and @mertens2013dynamic
 
+@mertens2013dynamic followed in the footsteps of @romer2010macroeconomic in further developing a synthesis of SVAR based estimation methods and the narrative 
+
  - add also the @giacomini2022robust as the possible future of the SVAR-IV field
 
-Overall, these studies highlight the value of the SVAR-IV as an instrument in trying to identify the 
+Overall, these studies highlight the value of the SVAR-IV as an instrument in trying to identify the $\dots$ 
 
 \newpage
