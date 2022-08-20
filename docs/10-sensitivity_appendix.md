@@ -25,7 +25,7 @@ To test whether the large contemporaneous effects in industrial production and u
 
 \includegraphics{Slide_pictures/var_no_GHG} \hfill{}
 
-\caption{Omitting the Greenhouse gas data from my endogenous variables}(\#fig:include-sens-irf2)
+\caption{Omitting the Greenhouse gas data from my endogenous variables. It can be seen that the results of the IRF are at least qualitatively similar as the ones reported in my main findings.}(\#fig:include-sens-irf2)
 \end{figure}
 
 As can be seen from the figure \@ref(fig:include-sens-irf2) the large contemporaneous effects are still present and thus it could be interpreted as evidence for using the trend values, I have utilised in the core model I have presented. It is reassuring that if the contemporaneous effects are ignored the effects are similar to the core model. This could be interpreted to indicate that the drastic contemporaneous effects are due to seasonal variation. Yet again my aim here is not to prove this. But on contrary, I will the counter I will provide these as an argument for the selection of the endogenous variables in my core model. Additionally, these two figures suggest that the core findings of my thesis are robust to a wide variety of choices in handling the endogenous variables.

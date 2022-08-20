@@ -1,5 +1,4 @@
-\begingroup
-\singlespacing
+
 
 
 
@@ -14,7 +13,14 @@ The data has been collected from...
 
 # Regulatory dates {#regdates}
 
+In this appendix I will detail the dates from previous research and the dates that I have identified using the same sources and methodology as @kaenzig2022.  
 
+The first stage of regulatory news which happened prior to year $2010$ were retrieved by \citeauthor{kaenzig2022} the from the [official journal of the European Union](https://eur-lex.europa.eu/homepage.html) [@kaenzig2022]. \citeauthor{kaenzig2022} also added the information of the dates of the NAP decisions which was collected from the research of @mansanet2009impacts which covers the phase I and phase II [@kaenzig2022, @mansanet2009impacts]. After the year $2010$ dates of interest are archived to the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) [@kaenzig2022]. All of these dates are collected to the table \@ref(tab:kanzig-reg). 
+
+I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg).
+
+\begingroup
+\singlespacing
 
 \begingroup\fontsize{10}{12}\selectfont
 
@@ -171,16 +177,17 @@ Dates & Even description & Type\\
 \end{longtable}
 \endgroup{}
 
+\newpage
 
 \begingroup\fontsize{10}{12}\selectfont
 
 \begin{longtable}[l]{l>{\raggedright\arraybackslash}p{35em}l}
-\caption{(\#tab:my-reg)Regulatory dates found using similar methodology as \citet{kaenzig2022} did.}\\
+\caption{(\#tab:my-reg)Regulatory dates I have found using similar methodology as \citet{kaenzig2022}.}\\
 \toprule
 Dates & Event description & Type\\
 \midrule
 \endfirsthead
-\caption[]{(\#tab:my-reg)Regulatory dates found using similar methodology as \citet{kaenzig2022} did. \textit{(continued)}}\\
+\caption[]{(\#tab:my-reg)Regulatory dates I have found using similar methodology as \citet{kaenzig2022}. \textit{(continued)}}\\
 \toprule
 Dates & Event description & Type\\
 \midrule

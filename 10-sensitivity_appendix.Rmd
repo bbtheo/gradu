@@ -33,7 +33,7 @@ My aim is not to explain this unusual impulse response functions but to use it a
 
 To test whether the large contemporaneous effects in industrial production and unemployment rate are solely due to the substantially varying greenhouse gas data. I will in this model I have omitted the Greenhouse gas emissions from the model. 
 
-```{r include-sens-irf2, echo=FALSE, fig.cap= 'Omitting the Greenhouse gas data from my endogenous variables'}
+```{r include-sens-irf2, echo=FALSE, fig.cap= 'Omitting the Greenhouse gas data from my endogenous variables. It can be seen that the results of the IRF are at least qualitatively similar as the ones reported in my main findings.'}
 
 knitr::include_graphics("Slide_pictures/var_no_GHG.png")
 
