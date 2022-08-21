@@ -19,9 +19,9 @@ y_t =
 \end{bmatrix}
 $$
 
-The sources of these endogenous variables can be found from the appendix \@ref(datasaources). The sample dates of my variables are from the begining of year 2000 to the end of third quarter in 2021. All the endogenous variables are also reported in monthly timeseries. The Greenhouse gas emissions are an exception to this and they have to be disaggregated to a monthly time series.    
+The sources of these endogenous variables can be found from the appendix \@ref(datasaources). The sample dates of my variables are from the beginning of year 2000 to the end of third quarter in 2021. All the endogenous variables are also reported in monthly time series. The Greenhouse gas emissions are an exception to this and they have to be disaggregated to a monthly time series.    
 
-Following Känzig (2022) example all the variables have been, except the 3 month Euribor and Unemployment rate stored as log-levels. The reasoning behind all of these choices is elaborated in the following subchapters.
+Following Känzig (2022) example all the variables have been, except the 3 month Euribor and Unemployment rate stored as log-levels. This is done for the results to be interpretable as per centages.
 
 ## Greenhouse gas emission disaggregation
 
@@ -75,12 +75,6 @@ Using the original observed unemployment rate bring similar problems as using th
 \caption{Monthly observed industrial production index and the seasonally adjusted trend values of industrial output in Finland.}(\#fig:indtrend)
 \end{figure}
 
-The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).   
-
-## Using log-levels
-
- - add reasons to using the values in log-levels 
-
-
+The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).
 
 \newpage

@@ -32,9 +32,9 @@ y_t =
 \end{bmatrix}
 $$
 
-The sources of these endogenous variables can be found from the appendix \@ref(datasaources). The sample dates of my variables are from the begining of year 2000 to the end of third quarter in 2021. All the endogenous variables are also reported in monthly timeseries. The Greenhouse gas emissions are an exception to this and they have to be disaggregated to a monthly time series.    
+The sources of these endogenous variables can be found from the appendix \@ref(datasaources). The sample dates of my variables are from the beginning of year 2000 to the end of third quarter in 2021. All the endogenous variables are also reported in monthly time series. The Greenhouse gas emissions are an exception to this and they have to be disaggregated to a monthly time series.    
 
-Following Känzig (2022) example all the variables have been, except the 3 month Euribor and Unemployment rate stored as log-levels. The reasoning behind all of these choices is elaborated in the following subchapters.
+Following Känzig (2022) example all the variables have been, except the 3 month Euribor and Unemployment rate stored as log-levels. This is done for the results to be interpretable as per centages.
 
 ## Greenhouse gas emission disaggregation
 
@@ -69,8 +69,8 @@ As a first impulse I wanted to capture this seasonal variation to my disaggregat
 
 
 ```{r ghgdisagg, warning=FALSE, echo=FALSE,message=FALSE, fig.cap = 'Different disaggregation strategies from yearly values of the GHG emissions in Finland to monthly values. The additional data transforms the disaggregation to aggressively seasonal.'}
-
-get_ghg_data()%>%
+ 
+get_ghg_data() %>%
   janitor::clean_names() %>% 
   mutate(date = lubridate::ymd(paste0(date,"01.01"))) %>%
   rename(ghg_yearly = paastot_yhteensa_ilman_lulucf_sektoria) %>%
@@ -83,10 +83,10 @@ get_ghg_data()%>%
   mutate(ghg_yearly = ghg_yearly/12) %>%
   pivot_longer(!date, names_to = "GHG_type", values_to = "CO2_eqv") %>% 
   
-  ggplot(aes(x = date, y = CO2_eqv, colour = GHG_type))+
+  ggplot(aes(x = date, y = CO2_eqv/1000, colour = GHG_type))+
   geom_line()+
   theme_bw()+
-  labs(x = NULL, y = "1000t of CO2eq")+
+  labs(x = NULL, y = "Millions t of CO2eq")+
   scale_color_brewer(labels = c("Estimate with \nadditional GHG data",
                                 'Method used by \nKänzig (2022)',
                                 'Dummy estimation'),
@@ -140,12 +140,6 @@ get_useful_data() %>%
 
 ```
 
-The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).   
-
-## Using log-levels
-
- - add reasons to using the values in log-levels 
-
-
+The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).
 
 \newpage

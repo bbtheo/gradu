@@ -28,7 +28,7 @@ In this appendix I will detail the dates from previous research and the dates th
 
 The first stage of regulatory news which happened prior to year $2010$ were retrieved by \citeauthor{kaenzig2022} the from the [official journal of the European Union](https://eur-lex.europa.eu/homepage.html) [@kaenzig2022]. \citeauthor{kaenzig2022} also added the information of the dates of the NAP decisions which was collected from the research of @mansanet2009impacts which covers the phase I and phase II [@kaenzig2022, @mansanet2009impacts]. After the year $2010$ dates of interest are archived to the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) [@kaenzig2022]. All of these dates are collected to the table \@ref(tab:kanzig-reg). 
 
-I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg).
+I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg). I extended the carbon policy regulatory update dates from the end of year $2018$ to the end of year $2021$.
 
 \begingroup
 \singlespacing
