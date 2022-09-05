@@ -32,7 +32,15 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
 ## Local projection {#localprojapp}
 
- - I will add here the local projection impulse responses as used in the supplementary material of @plagborg2021local
+In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local
+
+\begin{figure}
+
+\includegraphics{10-sensitivity_appendix_files/figure-latex/local-project-1} \hfill{}
+
+\caption{The local projections made}(\#fig:local-project)
+\end{figure}
+
 
 \newpage
 \singlespacing

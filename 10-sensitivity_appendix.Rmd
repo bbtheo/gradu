@@ -43,7 +43,37 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
 ## Local projection {#localprojapp}
 
- - I will add here the local projection impulse responses as used in the supplementary material of @plagborg2021local
+In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local
+
+```{r local-project, echo=FALSE, fig.cap='The local projections made',fig.height = 15, fig.width=10}
+
+data <- get_useful_data() %>% 
+  select(HCIP_energy, 
+         GHG_Känzig_method, 
+         HCIP, ind_adj, 
+         Euribor_3kk, 
+         unemp_adj, 
+         omx_hel_25, 
+         RBFIBIS) %>% 
+  as.data.frame()
+
+y <- get_useful_data() %>%
+  select(monthly_sum)%>% 
+  as.data.frame()
+
+local_projection <- lpirfs::lp_lin_iv(endog_data = data, 
+                  shock = y, 
+                  num_cores = NULL, 
+                  lags_endog_lin = 12, 
+                  trend = 2,
+                  confint = 1.65,
+                  hor = 50)
+
+
+lpirfs::plot.lpirfs_lin_iv_obj(local_projection)
+
+```
+
 
 \newpage
 \singlespacing

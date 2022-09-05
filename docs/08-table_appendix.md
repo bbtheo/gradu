@@ -19,6 +19,7 @@ The first stage of regulatory news which happened prior to year $2010$ were retr
 
 I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg). I extended the carbon policy regulatory update dates from the end of year $2018$ to the end of year $2021$.
 
+\newpage
 \begingroup
 \singlespacing
 
