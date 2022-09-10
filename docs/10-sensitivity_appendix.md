@@ -41,6 +41,10 @@ In this subchapter I will produce local projection impulse responses as used in 
 \caption{The local projections made}(\#fig:local-project)
 \end{figure}
 
+## Delta-method for @montiel2021
+
+
+
 
 \newpage
 \singlespacing

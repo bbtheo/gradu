@@ -57,12 +57,12 @@ data <- get_useful_data() %>%
          RBFIBIS) %>% 
   as.data.frame()
 
-y <- get_useful_data() %>%
+z <- get_useful_data() %>%
   select(monthly_sum)%>% 
   as.data.frame()
 
 local_projection <- lpirfs::lp_lin_iv(endog_data = data, 
-                  shock = y, 
+                  shock = z, 
                   num_cores = NULL, 
                   lags_endog_lin = 12, 
                   trend = 2,
@@ -73,6 +73,10 @@ local_projection <- lpirfs::lp_lin_iv(endog_data = data,
 lpirfs::plot.lpirfs_lin_iv_obj(local_projection)
 
 ```
+
+## Delta-method for @montiel2021
+
+
 
 
 \newpage
