@@ -155,10 +155,7 @@ get_trend_industrial_output <- function(){
 
 get_useful_data <- function(add_trend_values = T){
   
-  useful <- read.csv('data/useful.csv') %>%
-    tibble::as_tibble() %>%
-    dplyr::select(-X) %>%                           #some housekeeping because readr function didn't seem to work
-    dplyr::mutate(Date = lubridate::ymd(Date))
+  useful <- readr::read_csv('data/useful.csv', locale=locale(encoding="latin1")) 
   
   if(add_trend_values){
     useful <- useful %>%

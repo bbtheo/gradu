@@ -7,7 +7,38 @@
 
 # Data sources {#datasaources}
 
-The data has been collected from various 
+The data has been collected from various sources and these are individualised in Table \@ref(tab:data-source). Additionally, a short description of the variables, the sample dares and the reporting frequency of the variables is reported in the table.
+
+\begingroup\fontsize{10}{12}\selectfont
+
+\begin{longtable}[l]{>{\raggedright\arraybackslash}p{7em}>{\raggedright\arraybackslash}p{15em}>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{7em}l}
+\caption{(\#tab:data-source)Data sources for the baseline model presented in Chapter 7.3}\\
+\toprule
+Variable name & Description & Source & Sample dates & Data Frequency\\
+\midrule
+\endfirsthead
+\caption[]{(\#tab:data-source)Data sources for the baseline model presented in Chapter 7.3 \textit{(continued)}}\\
+\toprule
+Variable name & Description & Source & Sample dates & Data Frequency\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\endlastfoot
+ICE EUA Future c1 & Settlement price of the ICE EUA futures front contract. & Datastream & 04.08.2005 - 18.02.2022 & Daily\\
+HCIP - energy & Harmonised consumer price index of electricity, gas and other fuels. & Statistics Finland & 01.01.2000 - 01.01.2022 & Monthly\\
+GHG Emissions & Greenhouse gas emissions without LULUCF sector & Statistics Finland & 2000 - 2021 & Yearly\\
+HCIP & Harmonised consumer price index of all items & Statistics Finland & 01.01.2000 - 01.01.2022 & Monthly\\
+Industrial production & Industrial production index & Statistics Finland & 01.01.2000 - 01.01.2022 & Monthly\\
+\addlinespace
+3 month Euribor & Monthly averages of 3 month Euribor rate & ECB & 01.01.2000 - 01.01.2022 & Monthly\\
+Unemployment rate & Monthly trend cycle data of the unemployment rate & Eurostat & 01.01.2000 - 01.01.2022 & Monthly\\
+OMX Helsinki & OMX Helsinki 25 (OMXH25) - Price index & Datastream & 01.01.2000 - 01.01.2022 & Monthly\\
+REER - Finland & Broad Effective Exchange Rate for Finland & FRED & 01.01.2000 - 01.01.2022 & Monthly\\*
+\end{longtable}
+\endgroup{}
+
 
 \newpage
 
@@ -15,7 +46,7 @@ The data has been collected from various
 
 In this appendix I will detail the dates from previous research and the dates that I have identified using the same sources and methodology as @kaenzig2022.  
 
-The first stage of regulatory news which happened prior to year $2010$ were retrieved by \citeauthor{kaenzig2022} the from the [official journal of the European Union](https://eur-lex.europa.eu/homepage.html) [@kaenzig2022]. \citeauthor{kaenzig2022} also added the information of the dates of the NAP decisions which was collected from the research of @mansanet2009impacts which covers the phase I and phase II [@kaenzig2022, @mansanet2009impacts]. After the year $2010$ dates of interest are archived to the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) [@kaenzig2022]. All of these dates are collected to the table \@ref(tab:kanzig-reg). 
+The first stage of regulatory news which happened prior to year $2010$ were retrieved by \citeauthor{kaenzig2022} the from the [official journal of the European Union](https://eur-lex.europa.eu/homepage.html) [@kaenzig2022]. \citeauthor{kaenzig2022} also added the information of the dates of the NAP decisions which was collected from the research of @mansanet2009impacts which covers the phase I and phase II [@kaenzig2022, @mansanet2009impacts]. After the year $2010$ dates of interest are archived to the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) [@kaenzig2022]. All of these dates are collected to Table \@ref(tab:kanzig-reg). 
 
 I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg). I extended the carbon policy regulatory update dates from the end of year $2018$ to the end of year $2021$.
 

@@ -86,10 +86,10 @@ get_ghg_data() %>%
   ggplot(aes(x = date, y = CO2_eqv/1000, colour = GHG_type))+
   geom_line()+
   theme_bw()+
-  labs(x = NULL, y = "Millions t of CO2eq")+
-  scale_color_brewer(labels = c("Estimate with \nadditional GHG data",
-                                'Method used by \nKänzig (2022)',
-                                'Dummy estimation'),
+  labs(x = NULL, y =expression(Millions~t~of~CO[2]~equivalent))+
+  scale_color_brewer(labels = c("Estimate with\nadditional GHG data",
+                                'Method used by\nKänzig (2022)',
+                                'Disaggregation with no\nadditional information'),
                        name = '', palette = 'Dark2')+
   theme(legend.position = 'bottom')
 

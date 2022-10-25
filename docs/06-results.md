@@ -12,7 +12,7 @@ For my model the $F = 10.99$, which would imply that the instrument is strong en
 
 ## Results of \citet{kaenzig2022} {#kanzigresult}
 
-I will describe in this section the results of @kaenzig2022 as they differ in interesting ways to the results I bring forth in chapter \@ref(macroeff). This way the reader has a better understanding of the context of my results.
+I will describe in this section the results of @kaenzig2022 as they differ in interesting ways to the results I bring forth in Chapter \@ref(macroeff). This way the reader has a better understanding of the context of my results.
 
 Firstly the instantaneous shock from the carbon policy shock to the energy component of the Harmonised Index of Consumer Prices (HICP) is normalised to the tune of one per cent. 6 months after the carbon policy shock the 90 per cent confidence interval is between $0.5$ and $2$ per cents. For the whole $50$ months, that the impulse response was estimated, the energy components of HICP stays statistically significantly above zero [@kaenzig2022].
 

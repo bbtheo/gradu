@@ -10,7 +10,7 @@ In the figure below it can be seen that the model captures a significant seasona
 
 \begin{figure}
 
-\includegraphics{Slide_pictures/var_my_GHG} \hfill{}
+\includegraphics[width=53.33in]{Slide_pictures/var_my_GHG} \hfill{}
 
 \caption{The IRFs with my seasonally agressively varying GHG emissions and with the not seasonally adjusted unemployment rates as endogenous variables.}(\#fig:include-sens-irf1)
 \end{figure}
@@ -23,7 +23,7 @@ To test whether the large contemporaneous effects in industrial production and u
 
 \begin{figure}
 
-\includegraphics{Slide_pictures/var_no_GHG} \hfill{}
+\includegraphics[width=53.33in]{Slide_pictures/var_no_GHG} \hfill{}
 
 \caption{Omitting the Greenhouse gas data from my endogenous variables. It can be seen that the results of the IRF are at least qualitatively similar as the ones reported in my main findings.}(\#fig:include-sens-irf2)
 \end{figure}
