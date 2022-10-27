@@ -43,7 +43,7 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
 ## Local projection {#localprojapp}
 
-In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local
+In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local.
 
 ```{r local-project, echo=FALSE, fig.cap='The local projections made',fig.height = 15, fig.width=10}
 
@@ -74,10 +74,7 @@ lpirfs::plot.lpirfs_lin_iv_obj(local_projection)
 
 ```
 
-## Delta-method for @montiel2021
-
-
-
+There is notional resemblance with the signs of the IRF's, but as the sample size is as small as it is the local projections is not a viable strategy. 
 
 \newpage
 \singlespacing

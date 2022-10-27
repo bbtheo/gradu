@@ -13,11 +13,11 @@ source('gradu_read_data.R', encoding = 'UTF-8')
 
 # Instrument {#inst}
 
-The intrumental variable has been used since the start of the 20th century
+- tähän vähän sidostekstiä
 
 ## Futures market
 
-The usage of futures markets relies on  the hypothesis that the markets will effectively incorporate all available information to the price discovery mechanism [@hayek35v]. That would then 
+The usage of futures markets relies on  the hypothesis that the markets will effectively incorporate all available information to the price discovery mechanism [@hayek35v]. The futures are the markets' best guess for the future price of these carbon permits, given there are no transportation costs, and the risk tolerance of the seller and buyer are equal \citep{nakamura2018}
 
 Standard theory on asset price formation which was formulated by @pindyck2001 predicts that futures contracts on a day $d$ with a maturity $h$ are valued as:
 
@@ -53,7 +53,7 @@ $$
 
 This monthly surprise series is an ideal external instrument due to the exogeneity resulting from the short time frame of the identification. This means that a 
 
-## Regulatory Dates
+## Regulatory Dates {#reggdates}
 
 The identification of regulatory events is a vital part of the building of this instrument. In the figure \@ref(fig:instplot) the values of the $\text{CPSurprise}_m$ can be clearly seen.
 
