@@ -53,7 +53,7 @@ $$
 
 This monthly surprise series is an ideal external instrument due to the exogeneity resulting from the short time frame of the identification. This means that a 
 
-## Regulatory Dates
+## Regulatory Dates {#reggdates}
 
 The identification of regulatory events is a vital part of the building of this instrument. In the figure \@ref(fig:instplot) the values of the $\text{CPSurprise}_m$ can be clearly seen.
 
