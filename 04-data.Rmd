@@ -68,7 +68,7 @@ As my first instinct, I wanted to capture this seasonal variation into my disagg
 
 
 
-```{r ghgdisagg, warning=FALSE, echo=FALSE,message=FALSE, fig.cap = 'Different disaggregation strategies from yearly values of the GHG emissions in Finland to monthly values. The additional data from the sources of electricity production sources transforms the disaggregation to aggressively seasonal. The method used by \\citet{kaenzig2022} is likely to be an underestimation on the seasonal variation and the estimation produced my is likey to be an overestimation as it takes into account only the sources of electricity production. The Data for this figure is from the... '}
+```{r ghgdisagg, warning=FALSE, echo=FALSE,message=FALSE, fig.cap = 'Different disaggregation strategies from yearly values of the GHG emissions in Finland to monthly values. The additional data from the sources of electricity production sources transforms the disaggregation to aggressively seasonal. The method used by \\citet{kaenzig2022} is likely to be an underestimation on the seasonal variation and the estimation produced my is likey to be an overestimation as it takes into account only the sources of electricity production. The Data for this figure is from the Statistics Finland official statistics, and the disaggregation is done by me.'}
  
 get_ghg_data() %>%
   janitor::clean_names() %>% 
@@ -105,7 +105,7 @@ Even though my estimate might be more truthful in capturing the actual monthly g
 
 \citet{kaenzig2022} not utilise trend values in his analysis, this might not been a significant problem, as he used values that were observed from the whole European Union. This means that the seasonal variation was much lower than in the data that was observed from Finland. For exmaple, the seasonal variation of employment can be seen in Figure \@ref(unemptrend).
 
-```{r unemptrend, warning=FALSE, echo=FALSE,message=FALSE, fig.cap ='Monthly observed unemployment rate and the seasonally adjusted trend values of unemployment rate in Finland.  The Data is from the '}
+```{r unemptrend, warning=FALSE, echo=FALSE,message=FALSE, fig.cap ='Monthly observed unemployment rate and the seasonally adjusted trend values of unemployment rate in Finland.  The Data is from Eurostat.'}
 
 get_useful_data() %>%
   select(Date, Unemployment, unemp_adj) %>% 
@@ -122,9 +122,9 @@ get_useful_data() %>%
 ```
 
 
-Using the original observed unemployment rate brings similar problems as using the disaggregation with additional information of electricity production sources. It brings additional noise which is unrelated to the target shocks to the impulse response functions. In Appendix \@ref(seasonapp) I have reported the impulse responses when using the observed values. In the impulse response is present a substantial contemporaneous shock to the job market that is highly unlikely, and thus the model might have captured seasonal variation to the impulse responses of the shocks. These similar problems are also present with the industrial production index.
+Using the original observed unemployment rate brings similar problems as using the disaggregation with additional information of electricity production sources. It brings additional noise which is unrelated to the target shocks to the impulse response functions. In Appendix \@ref(seasonapp) I have reported the impulse responses when using the observed values. In the impulse response is present a substantial contemporaneous shock to the job market that is highly unlikely, and thus the model might have captured seasonal variation to the impulse response functions. 
 
-```{r indtrend, warning=FALSE, echo=FALSE,message=FALSE, fig.cap ='Monthly observed industrial production index and the seasonally adjusted trend values of industrial output in Finland.  The Data is from the '}
+```{r indtrend, warning=FALSE, echo=FALSE,message=FALSE, fig.cap ='Monthly observed industrial production index and the seasonally adjusted trend values of industrial output in Finland. The Data for this Figure is from the Statistics Finland.'}
 
 get_useful_data() %>%
   select(Date, industrial_prod, ind_adj) %>% 
@@ -141,6 +141,8 @@ get_useful_data() %>%
 
 ```
 
-The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).
+The problems are similar whether the variable is industrial production index, unemployment rate, or the disaggregated greenhouse gas emissions. The variation that is due to either measurement errors, seasonal variation, or the inherent randomness that is not produced by the processes we want to detect. 
+
+Especially when trying to infer long and medium-term effects of the carbon policy shock, the short-term variation of the endogenous variables affect the accuracy greatly. This can be seen when comparing the impulse response functions of the actual model in the chapter \@ref(results) and the one produced with the observed data in the appendix \@ref(seasonapp).
 
 \newpage

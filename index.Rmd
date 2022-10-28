@@ -26,6 +26,8 @@ library(dplyr)
 source('gradu_read_data.R', encoding = 'UTF-8')
 ```
 
+\cleardoublepage
+\pagenumbering{arabic}
 
 # Introduction {#intro}
 

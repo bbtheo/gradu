@@ -32,7 +32,7 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
 ## Local projection {#localprojapp}
 
-In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local
+In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local.
 
 \begin{figure}
 
@@ -41,10 +41,7 @@ In this subchapter I will produce local projection impulse responses as used in 
 \caption{The local projections made}(\#fig:local-project)
 \end{figure}
 
-## Delta-method for @montiel2021
-
-
-
+There is notional resemblance with the signs of the IRF's, but as the sample size is as small as it is the local projections is not a viable strategy. 
 
 \newpage
 \singlespacing

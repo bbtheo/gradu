@@ -1,11 +1,15 @@
 # Conclusion
 
-In my thesis I have examined the effects of the European union carbon policy shocks to Finnish economy. I started by examining the institutional development of the European carbon policy regime. I continued by presenting a short review of the literature on impacts of carbon policies and additionally presented the methodological evolvement of the structural autoregressive models. In following chapters I elaborated the model and data which my inference relies.  
 
-The analysis was be done by using structural vector autoregressive model which was identified by using an instrumental variable that was observed from day-on-day variation of futures prices. In tandem with the my goal of quasireplication of the findings of @kaenzig2022 I also extended the carbon policy surprise time series which was used as the instrument to the end of the year $2021$.
+In my thesis, I have examined the effects of the European Union carbon policy shocks on the Finnish economy. I started by examining the institutional development of the European carbon policy regime. Then, I presented a short review of the literature on the impacts of carbon policies and additionally presented the methodological evolvement of the structural autoregressive models. In the following chapters, I elaborated on the model and data on which my inference relies.  
 
-The results that I have produce evidence that Finnish economy has a significantly different impulse to Carbon Policy shock as does the wider European economy. The impulse reaction of Finnish economy has an interesting dual nature. Short-run and long-run reactions are opposite sign in multiple variables. This would mean that the carbon policy shock would benefit Finnish economy in short run. In longer run the economy reverts to the European norm.
+The analysis was done using a structural vector autoregressive model, which was identified by using an instrumental variable observed from the day-on-day variation of futures prices. In tandem with my goal of quasireplication of the findings of @kaenzig2022, I correspondingly extended the carbon policy surprise time series. As a result, the time series was extended to the end of the year $2021$.
 
-My thesis underlines the need for further research in the macroeconomic impacts of the changes in carbon policy regimes. Also the impacts of rising energy prices are today as topical as ever.  
+The results I have produced show that the Finnish economy has a significantly different impulse to Carbon Policy shock than the broader European economy. The impulse reaction of the Finnish economy has a fascinating dual nature. Short-run and long-run reactions have opposite signs in multiple variables. This would mean the carbon policy shock would benefit the Finnish economy in the short run. However, in the longer run, the economy reverts to the European norm.
+
+My thesis underlines the need for further research on the macroeconomic impacts of the changes in carbon policy regimes. Also, the impacts of rising energy prices are today as topical as ever.  
 
 \newpage
+
+\cleardoublepage
+\pagenumbering{Roman}
