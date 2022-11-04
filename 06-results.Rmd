@@ -47,9 +47,9 @@ In the following section, I will present the resulting impulse response to a car
 
 mat<-R.matlab::readMat('data/IRFsbench.mat')
 
-logful <- get_log_data()
+logful <- get_log_data() 
 
-y <- logful[,c(5,15,4,16,3,17,7,14)]
+y <- logful[,c(6,16,5,17,4,18,8,15)]
 mat$colnames <- colnames(y)
 
 base<-cbind(c(0:50), mat$IRFs.base)
@@ -103,7 +103,7 @@ data %>%
              labeller = as_labeller(
                c(HCIP_energy = "Energy component of HICP",
                GHG_Känzig_method = "GHG emissions", 
-               HCIP = "HICP",
+               HCIP = "HCIP",
                ind_adj = "Industrial output",
                Euribor_3kk = "3 month Euribor rate",
                unemp_adj = "Unemployment rate",

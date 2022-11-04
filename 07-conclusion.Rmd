@@ -1,6 +1,5 @@
 # Conclusion
 
-
 In my thesis, I have examined the effects of the European Union carbon policy shocks on the Finnish economy. I started by examining the institutional development of the European carbon policy regime. Then, I presented a short review of the literature on the impacts of carbon policies and additionally presented the methodological evolvement of the structural autoregressive models. In the following chapters, I elaborated on the model and data on which my inference relies.  
 
 The analysis was done using a structural vector autoregressive model, which was identified by using an instrumental variable observed from the day-on-day variation of futures prices. In tandem with my goal of quasireplication of the findings of @kaenzig2022, I correspondingly extended the carbon policy surprise time series. As a result, the time series was extended to the end of the year $2021$.
@@ -10,6 +9,3 @@ The results I have produced show that the Finnish economy has a significantly di
 My thesis underlines the need for further research on the macroeconomic impacts of the changes in carbon policy regimes. Also, the impacts of rising energy prices are today as topical as ever.  
 
 \newpage
-
-\cleardoublepage
-\pagenumbering{Roman}
