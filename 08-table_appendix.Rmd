@@ -18,7 +18,26 @@ source('gradu_read_data.R', encoding = 'UTF-8')
 
 # Data sources {#datasaources}
 
-The data has been collected from various 
+The data has been collected from various sources and these are individualised in Table \@ref(tab:data-source). Additionally, a short description of the variables, the sample dares and the reporting frequency of the variables is reported in the table.
+
+```{r data-source, warning=FALSE,}
+
+readxl::read_xlsx('data/data_sources.xlsx') %>% 
+  kableExtra::kbl(caption = 'Data sources for the baseline model presented in Chapter 7.3', 
+               booktabs = TRUE,
+               longtable = TRUE) %>% 
+  kableExtra::column_spec(1, width = "7em") %>% 
+  kableExtra::column_spec(2, width = "15em") %>% 
+  kableExtra::column_spec(3, width = "5em") %>% 
+  kableExtra::column_spec(4, width = "7em") %>% 
+  kableExtra::kable_styling(position = "left",
+                            latex_options = c("hold_position", "repeat_header", "scale_down"), 
+                            full_width = F,
+                            font_size = 10)
+
+
+```
+
 
 \newpage
 
@@ -26,10 +45,11 @@ The data has been collected from various
 
 In this appendix I will detail the dates from previous research and the dates that I have identified using the same sources and methodology as @kaenzig2022.  
 
-The first stage of regulatory news which happened prior to year $2010$ were retrieved by \citeauthor{kaenzig2022} the from the [official journal of the European Union](https://eur-lex.europa.eu/homepage.html) [@kaenzig2022]. \citeauthor{kaenzig2022} also added the information of the dates of the NAP decisions which was collected from the research of @mansanet2009impacts which covers the phase I and phase II [@kaenzig2022, @mansanet2009impacts]. After the year $2010$ dates of interest are archived to the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) [@kaenzig2022]. All of these dates are collected to the table \@ref(tab:kanzig-reg). 
+The first stage of regulatory news which happened prior to year $2010$ were retrieved by \citeauthor{kaenzig2022} the from the [official journal of the European Union](https://eur-lex.europa.eu/homepage.html) [@kaenzig2022]. \citeauthor{kaenzig2022} also added the information of the dates of the NAP decisions which was collected from the research of @mansanet2009impacts which covers the phase I and phase II [@kaenzig2022, @mansanet2009impacts]. After the year $2010$ dates of interest are archived to the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) [@kaenzig2022]. All of these dates are collected to Table \@ref(tab:kanzig-reg). 
 
-I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg).
+I followed the example of @kaenzig2022 and collected the regulatory dates also from the [European Commission Climate Action news archive](https://ec.europa.eu/clima/news/news_archives_en) and these dates are detailed in the table \@ref(tab:my-reg). I extended the carbon policy regulatory update dates from the end of year $2018$ to the end of year $2021$.
 
+\newpage
 \begingroup
 \singlespacing
 

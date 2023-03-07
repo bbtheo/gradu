@@ -10,7 +10,7 @@ In the figure below it can be seen that the model captures a significant seasona
 
 \begin{figure}
 
-\includegraphics{Slide_pictures/var_my_GHG} \hfill{}
+\includegraphics[width=53.33in]{Slide_pictures/var_my_GHG} \hfill{}
 
 \caption{The IRFs with my seasonally agressively varying GHG emissions and with the not seasonally adjusted unemployment rates as endogenous variables.}(\#fig:include-sens-irf1)
 \end{figure}
@@ -23,7 +23,7 @@ To test whether the large contemporaneous effects in industrial production and u
 
 \begin{figure}
 
-\includegraphics{Slide_pictures/var_no_GHG} \hfill{}
+\includegraphics[width=53.33in]{Slide_pictures/var_no_GHG} \hfill{}
 
 \caption{Omitting the Greenhouse gas data from my endogenous variables. It can be seen that the results of the IRF are at least qualitatively similar as the ones reported in my main findings.}(\#fig:include-sens-irf2)
 \end{figure}
@@ -32,7 +32,16 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
 ## Local projection {#localprojapp}
 
- - I will add here the local projection impulse responses as used in the supplementary material of @plagborg2021local
+In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local.
+
+\begin{figure}
+
+\includegraphics{10-sensitivity_appendix_files/figure-latex/local-project-1} \hfill{}
+
+\caption{The local projections made}(\#fig:local-project)
+\end{figure}
+
+There is notional resemblance with the signs of the IRF's, but as the sample size is as small as it is the local projections is not a viable strategy. 
 
 \newpage
 \singlespacing

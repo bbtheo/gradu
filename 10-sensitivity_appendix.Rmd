@@ -21,7 +21,7 @@ Here can be seen few different IRF plots with different choices with endogenous 
 
 In the figure below it can be seen that the model captures a significant seasonal variation to the greenhouse gas emissions. It is also unplausible to consider that a modest price shock would raise the Finnish unemployment rate by two percentage points. This is an excellent argument against using the seasonally varying data. As I demonstrated in the chapter \@ref(diagextinst) that the regulatory dates are accumulated on same times of the year, this could then combined with the seasonally varying Greenhouse gas data and seasonally varying unemployment data explain the impulse responses seen below. Also in this model is used the seasonally varying industrial production index, the 
 
-```{r include-sens-irf1, echo=FALSE, fig.cap='The IRFs with my seasonally agressively varying GHG emissions and with the not seasonally adjusted unemployment rates as endogenous variables.'}
+```{r include-sens-irf1, echo=FALSE, fig.cap='The IRFs with my seasonally agressively varying GHG emissions and with the not seasonally adjusted unemployment rates as endogenous variables.', fig.width=12}
 
 knitr::include_graphics("Slide_pictures/var_my_GHG.png")
 
@@ -33,7 +33,7 @@ My aim is not to explain this unusual impulse response functions but to use it a
 
 To test whether the large contemporaneous effects in industrial production and unemployment rate are solely due to the substantially varying greenhouse gas data. I will in this model I have omitted the Greenhouse gas emissions from the model. 
 
-```{r include-sens-irf2, echo=FALSE, fig.cap= 'Omitting the Greenhouse gas data from my endogenous variables. It can be seen that the results of the IRF are at least qualitatively similar as the ones reported in my main findings.'}
+```{r include-sens-irf2, echo=FALSE, fig.cap= 'Omitting the Greenhouse gas data from my endogenous variables. It can be seen that the results of the IRF are at least qualitatively similar as the ones reported in my main findings.', fig.width=12}
 
 knitr::include_graphics("Slide_pictures/var_no_GHG.png")
 
@@ -43,7 +43,38 @@ As can be seen from the figure \@ref(fig:include-sens-irf2) the large contempora
 
 ## Local projection {#localprojapp}
 
- - I will add here the local projection impulse responses as used in the supplementary material of @plagborg2021local
+In this subchapter I will produce local projection impulse responses as used in the supplementary material of @plagborg2021local.
+
+```{r local-project, echo=FALSE, fig.cap='The local projections made',fig.height = 15, fig.width=10}
+
+data <- get_useful_data() %>% 
+  select(HCIP_energy, 
+         GHG_Känzig_method, 
+         HCIP, ind_adj, 
+         Euribor_3kk, 
+         unemp_adj, 
+         omx_hel_25, 
+         RBFIBIS) %>% 
+  as.data.frame()
+
+z <- get_useful_data() %>%
+  select(monthly_sum)%>% 
+  as.data.frame()
+
+local_projection <- lpirfs::lp_lin_iv(endog_data = data, 
+                  shock = z, 
+                  num_cores = NULL, 
+                  lags_endog_lin = 12, 
+                  trend = 2,
+                  confint = 1.65,
+                  hor = 50)
+
+
+lpirfs::plot.lpirfs_lin_iv_obj(local_projection)
+
+```
+
+There is notional resemblance with the signs of the IRF's, but as the sample size is as small as it is the local projections is not a viable strategy. 
 
 \newpage
 \singlespacing

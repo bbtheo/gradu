@@ -1,6 +1,9 @@
+
 # Identification of the structural shock vector from the instrumental variable
 
-As note in the chapter \@ref(inst) the structural shock $s_1$ can be identified to the tune of size sing using the external instrument. In this chapter I will mainly follow the example of @kaenzig2021 and occasionally @stock2018 and with some additions also additions from @montiel2021. As stated in the chapter \@ref(extinst) the external instrument method is based on two foundational assumptions. The relevance assumption stated in equation \@ref(eq:cond1) and exogeneity assumption previously stated in the equation \@ref(eq:cond2):
+In this appendix I will provide a detailed solution to the identification of the structural shock using the instrumental variable method.The following method is used to identify structural impact vector that is scaled with a value $x$. In the results presented in Chapter \@ref(macroeff) $x = 1$. 
+
+As noted in Chapter \@ref(inst) the structural shock $s_1$ can be identified to the tune of size sing using the external instrument. In this chapter I will mainly follow the example of @kaenzig2021 and occasionally @stock2018 and with some additions also additions from @montiel2021. As stated in Chapter \@ref(extinst) the external instrument method is based on two foundational assumptions. The relevance assumption stated in Equation \@ref(eq:cond1) and the exogeneity assumption previously stated in equation \@ref(eq:cond2):
 
 $$
 \begin{aligned}
@@ -185,7 +188,7 @@ s_1 =
 \begin{pmatrix}
 x \\
 \tilde{s}_{2,1}x
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 It can be then seen that after the $s_{1,1}$ is know it is trivial to transform between the two strategies of normalisation. This is how I used the code that was inspired from the @kaenzig2021 replication files that used an similar strategy that @kaenzig2022.
